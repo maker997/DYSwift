@@ -15,6 +15,11 @@
 		379C7DE11DEE7B5200DB3A74 /* Cared.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379C7DDF1DEE7B5200DB3A74 /* Cared.storyboard */; };
 		379C7DE31DEE7B7100DB3A74 /* Own.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379C7DE21DEE7B7100DB3A74 /* Own.storyboard */; };
 		379C7DEF1DEE7CFD00DB3A74 /* RootTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DEE1DEE7CFD00DB3A74 /* RootTabBarVC.swift */; };
+		379C7DF11DEE898500DB3A74 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DF01DEE898500DB3A74 /* UIBarButtonItem-Extension.swift */; };
+		379C7DF31DEEB0D600DB3A74 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DF21DEEB0D600DB3A74 /* HomeVC.swift */; };
+		379C7DF51DEEBD4700DB3A74 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DF41DEEBD4700DB3A74 /* Common.swift */; };
+		379C7DF71DEEBDCD00DB3A74 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DF61DEEBDCD00DB3A74 /* PageTitleView.swift */; };
+		379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DF81DEED4F500DB3A74 /* UIView-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		379C7DE01DEE7B5200DB3A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Cared.storyboard; sourceTree = "<group>"; };
 		379C7DE21DEE7B7100DB3A74 /* Own.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Own.storyboard; path = ../../../Own.storyboard; sourceTree = "<group>"; };
 		379C7DEE1DEE7CFD00DB3A74 /* RootTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarVC.swift; sourceTree = "<group>"; };
+		379C7DF01DEE898500DB3A74 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		379C7DF21DEEB0D600DB3A74 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		379C7DF41DEEBD4700DB3A74 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		379C7DF61DEEBDCD00DB3A74 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		379C7DF81DEED4F500DB3A74 /* UIView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				379C7DDA1DEE7AF600DB3A74 /* Home.storyboard */,
+				379C7DF21DEEB0D600DB3A74 /* HomeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 		379C7DD41DEE7AB000DB3A74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				379C7DF61DEEBDCD00DB3A74 /* PageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +193,7 @@
 		379C7DD81DEE7AB000DB3A74 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				379C7DF41DEEBD4700DB3A74 /* Common.swift */,
 				379C7DD91DEE7AB000DB3A74 /* Extension */,
 			);
 			path = Tools;
@@ -189,6 +202,8 @@
 		379C7DD91DEE7AB000DB3A74 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				379C7DF81DEED4F500DB3A74 /* UIView-Extension.swift */,
+				379C7DF01DEE898500DB3A74 /* UIBarButtonItem-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -349,8 +364,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379C7DF71DEEBDCD00DB3A74 /* PageTitleView.swift in Sources */,
 				379C7DEF1DEE7CFD00DB3A74 /* RootTabBarVC.swift in Sources */,
+				379C7DF31DEEB0D600DB3A74 /* HomeVC.swift in Sources */,
+				379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */,
 				379C7DBA1DEE73B000DB3A74 /* AppDelegate.swift in Sources */,
+				379C7DF51DEEBD4700DB3A74 /* Common.swift in Sources */,
+				379C7DF11DEE898500DB3A74 /* UIBarButtonItem-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +504,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = KY98ADSRDF;
 				INFOPLIST_FILE = DYSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mengma.cn.DYSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +519,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = KY98ADSRDF;
 				INFOPLIST_FILE = DYSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mengma.cn.DYSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
