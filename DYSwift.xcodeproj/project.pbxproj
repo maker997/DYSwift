@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374ADB0B1DEFC8A500794724 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374ADB0A1DEFC8A500794724 /* ContentView.swift */; };
+		374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374ADB0C1DEFD81800794724 /* UIColor-Extension.swift */; };
 		379C7DBA1DEE73B000DB3A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DB91DEE73B000DB3A74 /* AppDelegate.swift */; };
 		379C7DBF1DEE73B000DB3A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379C7DBD1DEE73B000DB3A74 /* Main.storyboard */; };
 		379C7DC11DEE73B000DB3A74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379C7DC01DEE73B000DB3A74 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374ADB0A1DEFC8A500794724 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		374ADB0C1DEFD81800794724 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		379C7DB61DEE73B000DB3A74 /* DYSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379C7DB91DEE73B000DB3A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379C7DBE1DEE73B000DB3A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				379C7DF61DEEBDCD00DB3A74 /* PageTitleView.swift */,
+				374ADB0A1DEFC8A500794724 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			children = (
 				379C7DF81DEED4F500DB3A74 /* UIView-Extension.swift */,
 				379C7DF01DEE898500DB3A74 /* UIBarButtonItem-Extension.swift */,
+				374ADB0C1DEFD81800794724 /* UIColor-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -366,7 +372,9 @@
 			files = (
 				379C7DF71DEEBDCD00DB3A74 /* PageTitleView.swift in Sources */,
 				379C7DEF1DEE7CFD00DB3A74 /* RootTabBarVC.swift in Sources */,
+				374ADB0B1DEFC8A500794724 /* ContentView.swift in Sources */,
 				379C7DF31DEEB0D600DB3A74 /* HomeVC.swift in Sources */,
+				374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */,
 				379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */,
 				379C7DBA1DEE73B000DB3A74 /* AppDelegate.swift in Sources */,
 				379C7DF51DEEBD4700DB3A74 /* Common.swift in Sources */,

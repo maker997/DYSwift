@@ -8,11 +8,28 @@
 
 import UIKit
 
+private let headerH: CGFloat = 40
+
+
 class HomeVC: UIViewController {
-    lazy var headerView : PageTitleView = {
-        let rect = CGRect(x: 0, y: 64, width: screenWidth, height: 40)
+    lazy var headerView : PageTitleView = {     //header
+        let rect = CGRect(x: 0, y: 64, width: screenWidth, height: headerH)
         let header = PageTitleView(frame:rect , titles: ["推荐","游戏","娱乐","趣玩"])
         return header
+    }()
+    
+    lazy var contentView: ContentView = {
+        
+        let rect = CGRect(x: 0, y: 64.0 + headerH, width: screenWidth, height: screenHeight - headerH - 44)
+        
+        var chirlds = [UIViewController]()
+        for _ in 0..<4 {
+           let chirld = UIViewController()
+            chirlds.append(chirld)
+        }
+        let content = ContentView(frame: rect, chirldVCS: chirlds, parent: self)
+        content.backgroundColor = UIColor.purple
+       return content
     }()
 
     override func viewDidLoad() {
@@ -31,6 +48,9 @@ extension HomeVC{
         
        //2.设置 titleView
         setupHeaderView()
+        
+        //3.设置内容视图
+        view.addSubview(contentView)
     }
     
     //1.设置导航
@@ -48,11 +68,18 @@ extension HomeVC{
     fileprivate func setupHeaderView(){
         automaticallyAdjustsScrollViewInsets = false
         view.addSubview(headerView)
+        headerView.delegate = self
+        contentView.delegate = headerView
     }
+
 }
 
-
-
+//MARK:==========头部代理==========
+extension HomeVC: headerClickDelegate{
+    func titleClick(headView: PageTitleView, index: Int) {
+        contentView.setOffset(page: index)
+    }
+}
 
 
 

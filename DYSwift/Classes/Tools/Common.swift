@@ -10,7 +10,7 @@
 import UIKit
 
 let screenWidth = UIScreen.main.bounds.size.width
-let screenHeight = UIScreen.main.bounds.size.height
+let screenHeight = UIScreen.main.bounds.size.height - 64
 let margin : CGFloat = 15
 let itemMargin :CGFloat = 10
 
