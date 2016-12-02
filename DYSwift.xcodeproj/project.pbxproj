@@ -22,6 +22,14 @@
 		379C7DF51DEEBD4700DB3A74 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DF41DEEBD4700DB3A74 /* Common.swift */; };
 		379C7DF71DEEBDCD00DB3A74 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DF61DEEBDCD00DB3A74 /* PageTitleView.swift */; };
 		379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379C7DF81DEED4F500DB3A74 /* UIView-Extension.swift */; };
+		37C5D1561DF1296C00671C04 /* RecommandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5D1551DF1296C00671C04 /* RecommandVC.swift */; };
+		37C5D1581DF14C4A00671C04 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C5D1571DF14C4A00671C04 /* Reveal.framework */; };
+		37C5D15C1DF1551800671C04 /* CollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5D15A1DF1551800671C04 /* CollectionHeader.swift */; };
+		37C5D15D1DF1551800671C04 /* CollectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C5D15B1DF1551800671C04 /* CollectionHeader.xib */; };
+		37C5D1601DF15AE200671C04 /* NormalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5D15E1DF15AE200671C04 /* NormalCollectionCell.swift */; };
+		37C5D1611DF15AE200671C04 /* NormalCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C5D15F1DF15AE200671C04 /* NormalCollectionCell.xib */; };
+		37C5D1641DF1697A00671C04 /* PrettyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */; };
+		37C5D1651DF1697A00671C04 /* PrettyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +50,14 @@
 		379C7DF41DEEBD4700DB3A74 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		379C7DF61DEEBDCD00DB3A74 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		379C7DF81DEED4F500DB3A74 /* UIView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		37C5D1551DF1296C00671C04 /* RecommandVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommandVC.swift; sourceTree = "<group>"; };
+		37C5D1571DF14C4A00671C04 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = ../../../Reveal.framework; sourceTree = "<group>"; };
+		37C5D15A1DF1551800671C04 /* CollectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeader.swift; sourceTree = "<group>"; };
+		37C5D15B1DF1551800671C04 /* CollectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeader.xib; sourceTree = "<group>"; };
+		37C5D15E1DF15AE200671C04 /* NormalCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalCollectionCell.swift; sourceTree = "<group>"; };
+		37C5D15F1DF15AE200671C04 /* NormalCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalCollectionCell.xib; sourceTree = "<group>"; };
+		37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyCollectionCell.swift; sourceTree = "<group>"; };
+		37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrettyCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C5D1581DF14C4A00671C04 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +129,7 @@
 			children = (
 				379C7DDA1DEE7AF600DB3A74 /* Home.storyboard */,
 				379C7DF21DEEB0D600DB3A74 /* HomeVC.swift */,
+				37C5D1551DF1296C00671C04 /* RecommandVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +144,8 @@
 		379C7DCF1DEE7AB000DB3A74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37C5D15A1DF1551800671C04 /* CollectionHeader.swift */,
+				37C5D15B1DF1551800671C04 /* CollectionHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +188,10 @@
 			children = (
 				379C7DF61DEEBDCD00DB3A74 /* PageTitleView.swift */,
 				374ADB0A1DEFC8A500794724 /* ContentView.swift */,
+				37C5D15E1DF15AE200671C04 /* NormalCollectionCell.swift */,
+				37C5D15F1DF15AE200671C04 /* NormalCollectionCell.xib */,
+				37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */,
+				37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +222,7 @@
 		379C7DD81DEE7AB000DB3A74 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				37C5D1591DF14C6300671C04 /* libs */,
 				379C7DF41DEEBD4700DB3A74 /* Common.swift */,
 				379C7DD91DEE7AB000DB3A74 /* Extension */,
 			);
@@ -294,6 +319,14 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		37C5D1591DF14C6300671C04 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				37C5D1571DF14C4A00671C04 /* Reveal.framework */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,9 +389,12 @@
 			files = (
 				379C7DDC1DEE7AF600DB3A74 /* Home.storyboard in Resources */,
 				379C7DE31DEE7B7100DB3A74 /* Own.storyboard in Resources */,
+				37C5D15D1DF1551800671C04 /* CollectionHeader.xib in Resources */,
 				379C7DE11DEE7B5200DB3A74 /* Cared.storyboard in Resources */,
+				37C5D1651DF1697A00671C04 /* PrettyCollectionCell.xib in Resources */,
 				379C7DC11DEE73B000DB3A74 /* Assets.xcassets in Resources */,
 				379C7DDE1DEE7B1D00DB3A74 /* Live.storyboard in Resources */,
+				37C5D1611DF15AE200671C04 /* NormalCollectionCell.xib in Resources */,
 				379C7DBF1DEE73B000DB3A74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,11 +408,15 @@
 			files = (
 				379C7DF71DEEBDCD00DB3A74 /* PageTitleView.swift in Sources */,
 				379C7DEF1DEE7CFD00DB3A74 /* RootTabBarVC.swift in Sources */,
+				37C5D1601DF15AE200671C04 /* NormalCollectionCell.swift in Sources */,
 				374ADB0B1DEFC8A500794724 /* ContentView.swift in Sources */,
 				379C7DF31DEEB0D600DB3A74 /* HomeVC.swift in Sources */,
 				374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */,
 				379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */,
 				379C7DBA1DEE73B000DB3A74 /* AppDelegate.swift in Sources */,
+				37C5D1561DF1296C00671C04 /* RecommandVC.swift in Sources */,
+				37C5D1641DF1697A00671C04 /* PrettyCollectionCell.swift in Sources */,
+				37C5D15C1DF1551800671C04 /* CollectionHeader.swift in Sources */,
 				379C7DF51DEEBD4700DB3A74 /* Common.swift in Sources */,
 				379C7DF11DEE898500DB3A74 /* UIBarButtonItem-Extension.swift in Sources */,
 			);
@@ -511,9 +551,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = KY98ADSRDF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DYSwift",
+				);
 				INFOPLIST_FILE = DYSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mengma.cn.DYSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -526,9 +576,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = KY98ADSRDF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DYSwift",
+				);
 				INFOPLIST_FILE = DYSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mengma.cn.DYSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

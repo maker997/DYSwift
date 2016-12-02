@@ -12,24 +12,23 @@ private let headerH: CGFloat = 40
 
 
 class HomeVC: UIViewController {
-    lazy var headerView : PageTitleView = {     //header
+    lazy var headerView : PageTitleView = {         //header
         let rect = CGRect(x: 0, y: 64, width: screenWidth, height: headerH)
         let header = PageTitleView(frame:rect , titles: ["推荐","游戏","娱乐","趣玩"])
         return header
     }()
     
-    lazy var contentView: ContentView = {
-        
+    lazy var contentView: ContentView = {           //内容视图
         let rect = CGRect(x: 0, y: 64.0 + headerH, width: screenWidth, height: screenHeight - headerH - 44)
-        
         var chirlds = [UIViewController]()
-        for _ in 0..<4 {
+        chirlds.append(RecommandVC())
+        for _ in 0..<3 {
            let chirld = UIViewController()
-            chirlds.append(chirld)
+           chirlds.append(chirld)
+           chirld.view.backgroundColor = UIColor.randomColor()
         }
         let content = ContentView(frame: rect, chirldVCS: chirlds, parent: self)
-        content.backgroundColor = UIColor.purple
-       return content
+        return content
     }()
 
     override func viewDidLoad() {
@@ -71,7 +70,6 @@ extension HomeVC{
         headerView.delegate = self
         contentView.delegate = headerView
     }
-
 }
 
 //MARK:==========头部代理==========

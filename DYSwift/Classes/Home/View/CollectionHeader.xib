@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94z-dZ-3FD">
+                    <rect key="frame" x="19" y="20" width="66" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0N-e4-e2W">
+                    <rect key="frame" x="374" y="10" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="uY7-aq-1zX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="更多  &gt;">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lk7-Er-hOt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="10"/>
+                    <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="skn-Wg-Cov"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_hot" translatesAutoresizingMaskIntoConstraints="NO" id="kAH-mK-uta">
+                    <rect key="frame" x="0.0" y="23" width="14" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="Q0f-XJ-dFX"/>
+                        <constraint firstAttribute="width" constant="14" id="kJ0-BS-z1K"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="lk7-Er-hOt" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="3es-9n-92W"/>
+                <constraint firstItem="kAH-mK-uta" firstAttribute="top" secondItem="lk7-Er-hOt" secondAttribute="bottom" constant="13" id="Iap-2d-loc"/>
+                <constraint firstItem="kAH-mK-uta" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="J91-Sc-fMc"/>
+                <constraint firstItem="lk7-Er-hOt" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="JlX-3e-Ebd"/>
+                <constraint firstItem="94z-dZ-3FD" firstAttribute="leading" secondItem="kAH-mK-uta" secondAttribute="trailing" constant="5" id="Whk-gt-gcp"/>
+                <constraint firstAttribute="trailing" secondItem="lk7-Er-hOt" secondAttribute="trailing" id="jXs-l1-NoV"/>
+                <constraint firstAttribute="trailing" secondItem="P0N-e4-e2W" secondAttribute="trailing" id="mYD-75-VAA"/>
+                <constraint firstItem="94z-dZ-3FD" firstAttribute="centerY" secondItem="kAH-mK-uta" secondAttribute="centerY" id="rrT-4l-CDf"/>
+                <constraint firstItem="P0N-e4-e2W" firstAttribute="top" secondItem="lk7-Er-hOt" secondAttribute="bottom" id="xU7-dx-bGF"/>
+            </constraints>
+            <point key="canvasLocation" x="-191" y="-106"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="home_header_hot" width="18" height="18"/>
+    </resources>
+</document>

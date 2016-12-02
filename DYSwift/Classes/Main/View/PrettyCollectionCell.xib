@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PrettyCollectionCell" customModule="DYSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="226"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="210" height="226"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_online" translatesAutoresizingMaskIntoConstraints="NO" id="5zh-2l-myx">
+                        <rect key="frame" x="0.0" y="202" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="NYh-9z-Ree"/>
+                            <constraint firstAttribute="height" constant="14" id="owQ-ye-eoQ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_location" translatesAutoresizingMaskIntoConstraints="NO" id="ULc-lh-Vjs">
+                        <rect key="frame" x="146" y="202" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="14" id="Hhy-q3-bDe"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="J2D-is-Ic4"/>
+                            <constraint firstAttribute="height" constant="14" id="ODv-Zc-fZI"/>
+                            <constraint firstAttribute="width" constant="14" id="rLk-Vm-qUj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maker大主播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIF-7Q-4oV">
+                        <rect key="frame" x="17" y="201" width="80" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="3vV-Kt-BnF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京市" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSG-NC-F9q">
+                        <rect key="frame" x="160" y="201" width="50" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="bOt-S9-xPw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="Efd-LY-L6y">
+                        <rect key="frame" x="0.0" y="0.0" width="210" height="197"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqr-0x-vZj">
+                        <rect key="frame" x="135" y="5" width="70" height="20"/>
+                        <color key="backgroundColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="78Z-qv-5NP"/>
+                            <constraint firstAttribute="width" constant="70" id="SWh-r8-mB7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                        <state key="normal" title="6.5万" image="Image_online"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="5zh-2l-myx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0Nu-Yh-dxa"/>
+                <constraint firstAttribute="trailing" secondItem="kSG-NC-F9q" secondAttribute="trailing" id="6lZ-xX-yHt"/>
+                <constraint firstItem="Efd-LY-L6y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8WG-Pa-0Hh"/>
+                <constraint firstAttribute="trailing" secondItem="Efd-LY-L6y" secondAttribute="trailing" id="9oK-7u-c8l"/>
+                <constraint firstItem="Efd-LY-L6y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DPh-JP-a4q"/>
+                <constraint firstItem="kSG-NC-F9q" firstAttribute="leading" secondItem="ULc-lh-Vjs" secondAttribute="trailing" id="gLB-ts-q14"/>
+                <constraint firstItem="tIF-7Q-4oV" firstAttribute="leading" secondItem="5zh-2l-myx" secondAttribute="trailing" constant="3" id="gWm-QO-eSK"/>
+                <constraint firstItem="fqr-0x-vZj" firstAttribute="top" secondItem="Efd-LY-L6y" secondAttribute="top" constant="5" id="gst-u8-kwC"/>
+                <constraint firstItem="5zh-2l-myx" firstAttribute="centerY" secondItem="tIF-7Q-4oV" secondAttribute="centerY" id="ire-MS-4bu"/>
+                <constraint firstItem="kSG-NC-F9q" firstAttribute="centerY" secondItem="ULc-lh-Vjs" secondAttribute="centerY" id="kqm-dy-xrn"/>
+                <constraint firstAttribute="bottom" secondItem="5zh-2l-myx" secondAttribute="bottom" constant="10" id="lCH-bE-wMR"/>
+                <constraint firstItem="fqr-0x-vZj" firstAttribute="trailing" secondItem="Efd-LY-L6y" secondAttribute="trailing" constant="-5" id="pNk-Fk-Oi6"/>
+                <constraint firstItem="ULc-lh-Vjs" firstAttribute="top" secondItem="Efd-LY-L6y" secondAttribute="bottom" constant="5" id="sgL-05-ICw"/>
+                <constraint firstItem="kSG-NC-F9q" firstAttribute="centerY" secondItem="tIF-7Q-4oV" secondAttribute="centerY" id="w5e-13-2AQ"/>
+            </constraints>
+            <size key="customSize" width="210" height="226"/>
+            <point key="canvasLocation" x="-67" y="17"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>
