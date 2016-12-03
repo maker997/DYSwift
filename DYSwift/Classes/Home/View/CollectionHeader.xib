@@ -15,13 +15,13 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94z-dZ-3FD">
-                    <rect key="frame" x="19" y="20" width="66" height="20"/>
+                    <rect key="frame" x="29" y="20" width="66" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0N-e4-e2W">
-                    <rect key="frame" x="374" y="10" width="40" height="40"/>
+                    <rect key="frame" x="364" y="10" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="uY7-aq-1zX"/>
                     </constraints>
@@ -38,7 +38,7 @@
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_hot" translatesAutoresizingMaskIntoConstraints="NO" id="kAH-mK-uta">
-                    <rect key="frame" x="0.0" y="23" width="14" height="14"/>
+                    <rect key="frame" x="10" y="23" width="14" height="14"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="14" id="Q0f-XJ-dFX"/>
                         <constraint firstAttribute="width" constant="14" id="kJ0-BS-z1K"/>
@@ -48,11 +48,11 @@
             <constraints>
                 <constraint firstItem="lk7-Er-hOt" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="3es-9n-92W"/>
                 <constraint firstItem="kAH-mK-uta" firstAttribute="top" secondItem="lk7-Er-hOt" secondAttribute="bottom" constant="13" id="Iap-2d-loc"/>
-                <constraint firstItem="kAH-mK-uta" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="J91-Sc-fMc"/>
+                <constraint firstItem="kAH-mK-uta" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="J91-Sc-fMc"/>
                 <constraint firstItem="lk7-Er-hOt" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="JlX-3e-Ebd"/>
                 <constraint firstItem="94z-dZ-3FD" firstAttribute="leading" secondItem="kAH-mK-uta" secondAttribute="trailing" constant="5" id="Whk-gt-gcp"/>
                 <constraint firstAttribute="trailing" secondItem="lk7-Er-hOt" secondAttribute="trailing" id="jXs-l1-NoV"/>
-                <constraint firstAttribute="trailing" secondItem="P0N-e4-e2W" secondAttribute="trailing" id="mYD-75-VAA"/>
+                <constraint firstAttribute="trailing" secondItem="P0N-e4-e2W" secondAttribute="trailing" constant="10" id="mYD-75-VAA"/>
                 <constraint firstItem="94z-dZ-3FD" firstAttribute="centerY" secondItem="kAH-mK-uta" secondAttribute="centerY" id="rrT-4l-CDf"/>
                 <constraint firstItem="P0N-e4-e2W" firstAttribute="top" secondItem="lk7-Er-hOt" secondAttribute="bottom" id="xU7-dx-bGF"/>
             </constraints>

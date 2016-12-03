@@ -16,7 +16,7 @@ let SelectColor : (CGFloat,CGFloat,CGFloat) = (255, 128, 0)
 
 //MARK:==========定义代理==========
 protocol headerClickDelegate: NSObjectProtocol {
-    func titleClick(headView: PageTitleView,index: Int)
+    func titleClick(_ headView: PageTitleView,index: Int)
 }
 
 //MARK:==========类定义==========
@@ -73,7 +73,7 @@ extension PageTitleView{
             lbl.tag = index
             titleLbls.append(lbl)
         
-            let tap = UITapGestureRecognizer(target: self, action: #selector(self.titleClick(sender:)))
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.titleClick(_:)))
             lbl.addGestureRecognizer(tap)
             
             //布局
@@ -101,7 +101,7 @@ extension PageTitleView{
 //MARK:==========点击事件==========
 extension PageTitleView{
     //标签的点击
-    func titleClick(sender : UITapGestureRecognizer) {
+    func titleClick(_ sender : UITapGestureRecognizer) {
         //1.校验
         guard let lbl = sender.view else {
             return
@@ -116,11 +116,11 @@ extension PageTitleView{
         
         //3.移动指示器
         UIView.animate(withDuration: 0.2, animations: { _ in
-            self.indicatorView.setX(X: currentLbl.left())
+            self.indicatorView.setX(currentLbl.left())
         })
         
         //4.通过代理传到控制器
-       delegate?.titleClick(headView: self, index: lbl.tag)
+       delegate?.titleClick(self, index: lbl.tag)
         
     }
 }
@@ -128,14 +128,14 @@ extension PageTitleView{
 //MARK:==========下面滚动视图的代理==========
 extension PageTitleView: scrollProgressDelegate{
     
-    func scrollProgress(progress: CGFloat, target: Int, source: Int) {
+    func scrollProgress(_ progress: CGFloat, target: Int, source: Int) {
         //1.取出要改变的 Label
         let sourceLbl = titleLbls[source]
         let targetLbl = titleLbls[target]
         
         //2.移动指示器
         let  indictorX = sourceLbl.left() + progress * (targetLbl.left() - sourceLbl.left())
-        indicatorView.setX(X: indictorX)
+        indicatorView.setX(indictorX)
         
         //3.设置目标标签的渐变
         let range = (SelectColor.0 - NormalColor.0,SelectColor.1 - NormalColor.1,SelectColor.2 - NormalColor.2)

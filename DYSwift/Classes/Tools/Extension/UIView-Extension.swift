@@ -29,16 +29,16 @@ extension UIView{
         return frame.origin.y + frame.size.height
     }
     //MARK:==========set 方法==========
-    func setW(w:CGFloat) {
+    func setW(_ w:CGFloat) {
         frame.size.width = w
     }
-    func setH(H:CGFloat) {
+    func setH(_ H:CGFloat) {
         frame.size.height = H
     }
-    func setX(X:CGFloat) {
+    func setX(_ X:CGFloat) {
         frame.origin.x = X
     }
-    func setY(Y:CGFloat) {
+    func setY(_ Y:CGFloat) {
         frame.origin.y = Y
     }
 }

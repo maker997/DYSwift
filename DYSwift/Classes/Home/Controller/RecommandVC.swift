@@ -16,19 +16,20 @@ let PrettyCellId = "PrettyCellId"
 let SectionHeadId = "SectionHeadId"
 
 class RecommandVC: UIViewController {
+    private lazy var viewModel : RecommadViewModel = RecommadViewModel()
 
     fileprivate lazy var collectionView: UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth*0.75)
         layout.minimumLineSpacing = 0
-        layout.headerReferenceSize = CGSize(width: screenWidth, height: SectionHeadH)
         layout.minimumInteritemSpacing = itemMargin
+        layout.headerReferenceSize = CGSize(width: screenWidth, height: SectionHeadH)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: itemMargin, bottom: 0, right: itemMargin)
         
         
         let collect = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collect.dataSource = self
         collect.delegate = self
-        collect.contentInset = UIEdgeInsetsMake(0, itemMargin, 0, itemMargin)
         collect.register(UINib(nibName: "CollectionHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: SectionHeadId)
         collect.register(UINib(nibName: "NormalCollectionCell", bundle: nil), forCellWithReuseIdentifier: NormalCellId)
         collect.register(UINib(nibName: "PrettyCollectionCell", bundle: nil), forCellWithReuseIdentifier: PrettyCellId)
@@ -41,7 +42,8 @@ class RecommandVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         
-
+        //发送网络请求
+        viewModel.getData()
     }
 }
 

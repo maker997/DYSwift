@@ -10,7 +10,7 @@ import UIKit
 
 //MARK:==========协议==========
 protocol scrollProgressDelegate : NSObjectProtocol {
-    func scrollProgress(progress: CGFloat,target: Int, source:Int)
+    func scrollProgress(_ progress: CGFloat,target: Int, source:Int)
 }
 
 //MARK:==========常量==========
@@ -76,6 +76,9 @@ extension ContentView : UICollectionViewDelegate,UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         let vc = chirlds?[indexPath.item]
         vc?.view.frame = cell.contentView.bounds
+        for v in cell.contentView.subviews{
+            v.removeFromSuperview()
+        }
         cell.contentView.addSubview((vc?.view)!)
         return cell
     }
@@ -115,14 +118,14 @@ extension ContentView : UICollectionViewDelegate,UICollectionViewDataSource{
             }
         }
         
-        self.delegate?.scrollProgress(progress: progress, target: target, source: source)
+        self.delegate?.scrollProgress(progress, target: target, source: source)
 
     }
 }
 
 //MARK:==========对外开放的方法==========
 extension ContentView{
-    func setOffset(page:Int) {
+    func setOffset(_ page:Int) {
         isClick = true
         collectView.setContentOffset(CGPoint(x:CGFloat(page) * bounds.size.width,y:0), animated: false)
     }

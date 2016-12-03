@@ -12,14 +12,14 @@ class RootTabBarVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addChirldVC(nibName: "Home")
-        addChirldVC(nibName: "Live")
-        addChirldVC(nibName: "Cared")
-        addChirldVC(nibName: "Own")
+        addChirldVC("Home")
+        addChirldVC("Live")
+        addChirldVC("Cared")
+        addChirldVC("Own")
         
     }
     
-    func addChirldVC(nibName:String) {
+    func addChirldVC(_ nibName:String) {
         let chirldVC = UIStoryboard(name: nibName, bundle: nil).instantiateInitialViewController()!
         addChildViewController(chirldVC)
     }

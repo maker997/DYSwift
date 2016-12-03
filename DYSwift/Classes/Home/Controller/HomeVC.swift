@@ -74,8 +74,8 @@ extension HomeVC{
 
 //MARK:==========头部代理==========
 extension HomeVC: headerClickDelegate{
-    func titleClick(headView: PageTitleView, index: Int) {
-        contentView.setOffset(page: index)
+    func titleClick(_ headView: PageTitleView, index: Int) {
+        contentView.setOffset(index)
     }
 }
 

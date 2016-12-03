@@ -20,8 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+}
 
-
-
+func mprint<T>(message:T,file:String = #file,line:Int = #line){
+    #if DEBUG
+        let fileName = (file as NSString).lastPathComponent
+        print("\(fileName)---\(line)---\(message)")
+    #endif
 }
 
