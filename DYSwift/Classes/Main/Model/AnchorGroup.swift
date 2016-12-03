@@ -23,6 +23,9 @@ class AnchorGroup: NSObject {
     var groupIcon : String?         //组的图片
     
     
+    override init() {
+        super.init()
+    }
     init(dict:[String:Any]) {
         super.init()
         setValuesForKeys(dict)
@@ -33,3 +36,12 @@ class AnchorGroup: NSObject {
     }
     
 }
+
+
+
+
+
+
+
+
+
