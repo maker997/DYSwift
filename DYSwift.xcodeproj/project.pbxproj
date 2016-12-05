@@ -36,6 +36,8 @@
 		37C5D1641DF1697A00671C04 /* PrettyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */; };
 		37C5D1651DF1697A00671C04 /* PrettyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */; };
 		37E0A1B11DF5334E007212EE /* collectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0A1B01DF5334E007212EE /* collectionBaseCell.swift */; };
+		37E0A1B31DF54CF9007212EE /* MakerCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0A1B21DF54CF9007212EE /* MakerCycleView.swift */; };
+		37E0A1B51DF54D15007212EE /* MakerCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E0A1B41DF54D15007212EE /* MakerCycleView.xib */; };
 		51ACD29CC13E47AFC642DB50 /* Pods_DYSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8ED60AFE797BF73B5E5179 /* Pods_DYSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyCollectionCell.swift; sourceTree = "<group>"; };
 		37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrettyCollectionCell.xib; sourceTree = "<group>"; };
 		37E0A1B01DF5334E007212EE /* collectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionBaseCell.swift; sourceTree = "<group>"; };
+		37E0A1B21DF54CF9007212EE /* MakerCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakerCycleView.swift; sourceTree = "<group>"; };
+		37E0A1B41DF54D15007212EE /* MakerCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakerCycleView.xib; sourceTree = "<group>"; };
 		5F8ED60AFE797BF73B5E5179 /* Pods_DYSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C1D8B909DE2736D2ED9F65 /* Pods-DYSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYSwift/Pods-DYSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		B3EBFD3931A0A9C8A893FB44 /* Pods-DYSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYSwift/Pods-DYSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */,
 				37E0A1B01DF5334E007212EE /* collectionBaseCell.swift */,
 				37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */,
+				37E0A1B21DF54CF9007212EE /* MakerCycleView.swift */,
+				37E0A1B41DF54D15007212EE /* MakerCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 			files = (
 				379C7DDC1DEE7AF600DB3A74 /* Home.storyboard in Resources */,
 				379C7DE31DEE7B7100DB3A74 /* Own.storyboard in Resources */,
+				37E0A1B51DF54D15007212EE /* MakerCycleView.xib in Resources */,
 				37C5D15D1DF1551800671C04 /* CollectionHeader.xib in Resources */,
 				379C7DE11DEE7B5200DB3A74 /* Cared.storyboard in Resources */,
 				37C5D1651DF1697A00671C04 /* PrettyCollectionCell.xib in Resources */,
@@ -506,6 +513,7 @@
 				37C5D1601DF15AE200671C04 /* NormalCollectionCell.swift in Sources */,
 				374ADB0B1DEFC8A500794724 /* ContentView.swift in Sources */,
 				379C7DF31DEEB0D600DB3A74 /* HomeVC.swift in Sources */,
+				37E0A1B31DF54CF9007212EE /* MakerCycleView.swift in Sources */,
 				374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */,
 				379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */,
 				379C7DBA1DEE73B000DB3A74 /* AppDelegate.swift in Sources */,

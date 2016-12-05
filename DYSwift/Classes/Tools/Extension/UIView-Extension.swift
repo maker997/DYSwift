@@ -41,4 +41,10 @@ extension UIView{
     func setY(_ Y:CGFloat) {
         frame.origin.y = Y
     }
+    func setRight(_ right:CGFloat) {
+        frame.origin.x = right - frame.size.width
+    }
+    func setBot(_ bot:CGFloat) {
+        frame.origin.y = bot - frame.size.width
+    }
 }

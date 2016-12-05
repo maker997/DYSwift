@@ -14,9 +14,16 @@ let SectionHeadH: CGFloat = 50.0
 let NormalCellId = "NormalCellId"
 let PrettyCellId = "PrettyCellId"
 let SectionHeadId = "SectionHeadId"
+let CycleH = screenWidth/8*3
+
 
 class RecommandVC: UIViewController {
     fileprivate lazy var viewModel : RecommadViewModel = RecommadViewModel()
+    fileprivate lazy var cycleView : MakerCycleView = {
+        let cycleView = MakerCycleView.getCycleView()
+        cycleView.frame = CGRect(x: 0, y: -CycleH, width: screenWidth, height: CycleH)
+        return cycleView
+    }()
 
     fileprivate lazy var collectionView: UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
@@ -36,6 +43,7 @@ class RecommandVC: UIViewController {
         collect.backgroundColor = UIColor.white
         collect.showsVerticalScrollIndicator = false
         collect.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        collect.contentInset = UIEdgeInsetsMake(CycleH, 0, 0, 0)
         return collect
     }()
     override func viewDidLoad() {
@@ -55,6 +63,11 @@ extension RecommandVC{
     fileprivate func setupUI(){
         //1.添加 collectionView
         view.addSubview(collectionView)
+        
+        //2.往集合视图中添加轮播
+        collectionView.addSubview(cycleView)
+        
+       
         
     }
 }
