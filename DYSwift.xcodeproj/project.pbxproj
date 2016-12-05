@@ -35,6 +35,7 @@
 		37C5D1611DF15AE200671C04 /* NormalCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C5D15F1DF15AE200671C04 /* NormalCollectionCell.xib */; };
 		37C5D1641DF1697A00671C04 /* PrettyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */; };
 		37C5D1651DF1697A00671C04 /* PrettyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */; };
+		37E0A1B11DF5334E007212EE /* collectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0A1B01DF5334E007212EE /* collectionBaseCell.swift */; };
 		51ACD29CC13E47AFC642DB50 /* Pods_DYSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8ED60AFE797BF73B5E5179 /* Pods_DYSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		37C5D15F1DF15AE200671C04 /* NormalCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalCollectionCell.xib; sourceTree = "<group>"; };
 		37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyCollectionCell.swift; sourceTree = "<group>"; };
 		37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrettyCollectionCell.xib; sourceTree = "<group>"; };
+		37E0A1B01DF5334E007212EE /* collectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionBaseCell.swift; sourceTree = "<group>"; };
 		5F8ED60AFE797BF73B5E5179 /* Pods_DYSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C1D8B909DE2736D2ED9F65 /* Pods-DYSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYSwift/Pods-DYSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		B3EBFD3931A0A9C8A893FB44 /* Pods-DYSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYSwift/Pods-DYSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				37C5D15E1DF15AE200671C04 /* NormalCollectionCell.swift */,
 				37C5D15F1DF15AE200671C04 /* NormalCollectionCell.xib */,
 				37C5D1621DF1697A00671C04 /* PrettyCollectionCell.swift */,
+				37E0A1B01DF5334E007212EE /* collectionBaseCell.swift */,
 				37C5D1631DF1697A00671C04 /* PrettyCollectionCell.xib */,
 			);
 			path = View;
@@ -515,6 +518,7 @@
 				379C7DF51DEEBD4700DB3A74 /* Common.swift in Sources */,
 				37B716621DF2B18200C819D3 /* AnchorModel.swift in Sources */,
 				379C7DF11DEE898500DB3A74 /* UIBarButtonItem-Extension.swift in Sources */,
+				37E0A1B11DF5334E007212EE /* collectionBaseCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

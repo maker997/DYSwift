@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import Kingfisher
 
-class NormalCollectionCell: UICollectionViewCell {
+class NormalCollectionCell: collectionBaseCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        contentView.layer.cornerRadius = 4
-//        contentView.layer.masksToBounds
+
+    @IBOutlet weak var roomName: UILabel!
+    
+    
+   override var anchor : AnchorModel? {
+        didSet{
+            super.anchor = anchor
+            
+            //设置房间名称
+            roomName.text = anchor?.room_name
+            
+        }
     }
+    
 
 }

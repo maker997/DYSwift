@@ -16,7 +16,7 @@ let PrettyCellId = "PrettyCellId"
 let SectionHeadId = "SectionHeadId"
 
 class RecommandVC: UIViewController {
-    private lazy var viewModel : RecommadViewModel = RecommadViewModel()
+    fileprivate lazy var viewModel : RecommadViewModel = RecommadViewModel()
 
     fileprivate lazy var collectionView: UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
@@ -43,7 +43,9 @@ class RecommandVC: UIViewController {
         setupUI()
         
         //发送网络请求
-        viewModel.getData()
+        viewModel.getData { 
+            self.collectionView.reloadData()
+        }
     }
 }
 
@@ -60,33 +62,36 @@ extension RecommandVC{
 //MARK:==========collectionView 代理==========
 extension RecommandVC : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        
+        return viewModel.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let anchorGroup = viewModel.anchorGroups[section]
+        
+        return anchorGroup.AnchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         
         if indexPath.section == 1 {
-          let  cell = collectionView.dequeueReusableCell(withReuseIdentifier: PrettyCellId, for: indexPath)
+          let  cell = collectionView.dequeueReusableCell(withReuseIdentifier: PrettyCellId, for: indexPath) as! PrettyCollectionCell
+            let anchorGroup = viewModel.anchorGroups[indexPath.section]
+            cell.anchor = anchorGroup.AnchorGroups[indexPath.item]
             return cell
         }else{
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NormalCellId, for: indexPath)
+           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NormalCellId, for: indexPath) as! NormalCollectionCell
+            let anchorGroup = viewModel.anchorGroups[indexPath.section]
+            cell.anchor = anchorGroup.AnchorGroups[indexPath.item]
             return cell
         }
     
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeadId, for: indexPath)
-        
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeadId, for: indexPath) as! CollectionHeader
+        headerView.group = viewModel.anchorGroups[indexPath.section]
         return headerView
     }
     

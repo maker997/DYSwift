@@ -9,12 +9,14 @@
 import UIKit
 
 class AnchorModel: NSObject {
-    var room_src :String? //主播的缩略图
-    var game_name :String? //
-    var nickname : String? //主播昵称
-    var room_name : String? //房间名称
-    var room_id : Int = 0 //房间 id
-    var online : Int = 0    //在线人数
+    var room_src : String?      //主播的缩略图
+    var game_name : String?     //
+    var nickname : String?      //主播昵称
+    var room_name : String?     //房间名称
+    var room_id : Int = 0       //房间 id
+    var online : Int = 0        //在线人数
+    var anchor_city : String?   //主播所在的城市
+    
     
     init(dict : [String:Any]) {
         super.init()

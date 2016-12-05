@@ -20,7 +20,7 @@ class AnchorGroup: NSObject {
     }
     var AnchorGroups : [AnchorModel]  = [AnchorModel]()
     var tag_name : String?          //组的名字
-    var groupIcon : String?         //组的图片
+    var groupIcon : String = ""     //组的图片
     
     
     override init() {

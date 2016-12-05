@@ -10,9 +10,25 @@ import UIKit
 
 class CollectionHeader: UICollectionReusableView {
 
+    @IBOutlet weak var headerIcon: UIImageView!
+    @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var headerMoreBtn: UIButton!
+    
+    var group : AnchorGroup? {
+        didSet{
+            guard let group = group else {
+                return
+            }
+            
+            headerTitle.text = group.tag_name
+            headerIcon.image = UIImage(named: group.groupIcon)
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
     
 }
