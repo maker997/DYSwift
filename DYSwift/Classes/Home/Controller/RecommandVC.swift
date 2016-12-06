@@ -9,22 +9,29 @@
 import UIKit
 
 //MARK:==========常量==========
-let itemWidth = (screenWidth - 3*itemMargin)/2
+fileprivate let itemWidth = (screenWidth - 3*itemMargin)/2
 let SectionHeadH: CGFloat = 50.0
 let NormalCellId = "NormalCellId"
 let PrettyCellId = "PrettyCellId"
 let SectionHeadId = "SectionHeadId"
 let CycleH = screenWidth/8*3
+let GameviewH : CGFloat = 90
+
 
 
 class RecommandVC: UIViewController {
     fileprivate lazy var viewModel : RecommadViewModel = RecommadViewModel()
     fileprivate lazy var cycleView : MakerCycleView = {
         let cycleView = MakerCycleView.getCycleView()
-        cycleView.frame = CGRect(x: 0, y: -CycleH, width: screenWidth, height: CycleH)
+        cycleView.frame = CGRect(x: 0, y: -(CycleH + GameviewH), width: screenWidth, height: CycleH)
         return cycleView
     }()
-
+    fileprivate lazy var gameView : GameView = {
+        let game = GameView.getGameView()
+        game.frame = CGRect(x: 0, y: -GameviewH, width: screenWidth, height: GameviewH)
+        return game
+    }()
+    
     fileprivate lazy var collectionView: UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth*0.75)
@@ -43,7 +50,7 @@ class RecommandVC: UIViewController {
         collect.backgroundColor = UIColor.white
         collect.showsVerticalScrollIndicator = false
         collect.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        collect.contentInset = UIEdgeInsetsMake(CycleH, 0, 0, 0)
+        collect.contentInset = UIEdgeInsetsMake(CycleH + GameviewH, 0, 0, 0)
         return collect
     }()
     override func viewDidLoad() {
@@ -53,6 +60,12 @@ class RecommandVC: UIViewController {
         //发送网络请求
         viewModel.getData { 
             self.collectionView.reloadData()
+            self.gameView.anchorGroup = self.viewModel.anchorGroups
+        }
+        
+        //请求轮播的数据
+        viewModel.getCycleData {
+            self.cycleView.cycleModels = self.viewModel.cycles
         }
     }
 }
@@ -67,7 +80,8 @@ extension RecommandVC{
         //2.往集合视图中添加轮播
         collectionView.addSubview(cycleView)
         
-       
+        //3.添加推荐游戏视图
+        collectionView.addSubview(gameView)
         
     }
 }

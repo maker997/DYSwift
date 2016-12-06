@@ -19,7 +19,7 @@ enum MethodType {
 class NetworkTool {
     static let shareInstance : NetworkTool = NetworkTool()
 
-    func reqest(method:MethodType,url:String,params:[String:Any]?=nil,finished:@escaping ( _ result:[String:AnyObject]?, _ error:Error?) -> ()) {
+    func reqest(method:MethodType,url:String,params:[String:Any]?=nil,finished:@escaping ( _ result:[String:Any]?, _ error:Error?) -> ()) {
         
         let methods = method == .GET ? HTTPMethod.get : HTTPMethod.post
         

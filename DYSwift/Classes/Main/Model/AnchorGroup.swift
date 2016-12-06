@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnchorGroup: NSObject {
+class AnchorGroup: GameBaseModel {
     var room_list : [[String:Any]]?{//主播数组
         didSet{
             guard let list = room_list else { return }
@@ -19,14 +19,13 @@ class AnchorGroup: NSObject {
         }
     }
     var AnchorGroups : [AnchorModel]  = [AnchorModel]()
-    var tag_name : String?          //组的名字
-    var groupIcon : String = ""     //组的图片
-    
-    
+    var groupIcon : String = ""     //组的本地小图
+
     override init() {
         super.init()
     }
-    init(dict:[String:Any]) {
+    
+    override init(dict:[String:Any]) {
         super.init()
         setValuesForKeys(dict)
     }

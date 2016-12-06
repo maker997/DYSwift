@@ -22,7 +22,8 @@ class HomeVC: UIViewController {
         let rect = CGRect(x: 0, y: 64.0 + headerH, width: screenWidth, height: screenHeight - headerH - 44)
         var chirlds = [UIViewController]()
         chirlds.append(RecommandVC())
-        for _ in 0..<3 {
+        chirlds.append(GameVC())
+        for _ in 0..<2 {
            let chirld = UIViewController()
            chirlds.append(chirld)
            chirld.view.backgroundColor = UIColor.randomColor()
