@@ -25,10 +25,23 @@ class CollectionHeader: UICollectionReusableView {
         }
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
 
     }
     
 }
+
+extension CollectionHeader {
+    class func getCollectionHeader () -> CollectionHeader{
+        return Bundle.main.loadNibNamed("CollectionHeader", owner: nil, options: nil)?.first as! CollectionHeader
+    }
+}
+
+
+
+
+
+
+
+

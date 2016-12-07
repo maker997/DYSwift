@@ -49,6 +49,7 @@ class MakerCycleView: UIView {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = collectionView.bounds.size
         
+        
     }
 }
 

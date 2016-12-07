@@ -14,7 +14,7 @@ private let headerH: CGFloat = 40
 class HomeVC: UIViewController {
     lazy var headerView : PageTitleView = {         //header
         let rect = CGRect(x: 0, y: 64, width: screenWidth, height: headerH)
-        let header = PageTitleView(frame:rect , titles: ["推荐","游戏","娱乐","趣玩"])
+        let header = PageTitleView(frame:rect , titles: ["推荐","游戏","娱乐","手游","趣玩"])
         return header
     }()
     
@@ -23,6 +23,7 @@ class HomeVC: UIViewController {
         var chirlds = [UIViewController]()
         chirlds.append(RecommandVC())
         chirlds.append(GameVC())
+        chirlds.append(EntertainVC())
         for _ in 0..<2 {
            let chirld = UIViewController()
            chirlds.append(chirld)

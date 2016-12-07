@@ -55,18 +55,10 @@ class RecommandVC: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         
-        //发送网络请求
-        viewModel.getData { 
-            self.collectionView.reloadData()
-            self.gameView.anchorGroup = self.viewModel.anchorGroups
-        }
-        
-        //请求轮播的数据
-        viewModel.getCycleData {
-            self.cycleView.cycleModels = self.viewModel.cycles
-        }
+        loadData()
     }
 }
 
@@ -84,6 +76,34 @@ extension RecommandVC{
         collectionView.addSubview(gameView)
         
     }
+}
+
+//MARK:==========请求数据==========
+extension RecommandVC {
+    func loadData() {
+        //发送网络请求
+        viewModel.getData {
+            //1.显示 collectionView 的数据
+            self.collectionView.reloadData()
+            
+            //2.处理数据显示推荐游戏
+            var tempAnchorGroup = self.viewModel.anchorGroups
+            tempAnchorGroup.removeFirst()
+            tempAnchorGroup.removeFirst()
+            
+            let group = AnchorGroup()
+            group.tag_name = "更多"
+            tempAnchorGroup.append(group)
+            self.gameView.anchorGroup = tempAnchorGroup
+            
+        }
+        
+        //请求轮播的数据
+        viewModel.getCycleData {
+            self.cycleView.cycleModels = self.viewModel.cycles
+        }
+    }
+    
 }
 
 //MARK:==========collectionView 代理==========

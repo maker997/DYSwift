@@ -12,14 +12,8 @@ let gameCellId = "gameCellId"
 
 class GameView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
-    var anchorGroup : [AnchorGroup]? {
+    var anchorGroup : [GameBaseModel]? {
         didSet{
-            anchorGroup?.removeFirst()
-            anchorGroup?.removeFirst()
-            
-            let groups = AnchorGroup()
-            groups.tag_name = "更多"
-            anchorGroup?.append(groups)
             collectionView.reloadData()
         }
     }

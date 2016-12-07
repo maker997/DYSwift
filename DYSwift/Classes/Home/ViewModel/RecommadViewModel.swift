@@ -8,8 +8,7 @@
 
 import UIKit
 
-class RecommadViewModel: NSObject {
-    var anchorGroups : [AnchorGroup] = [AnchorGroup]()
+class RecommadViewModel: BaseViewModel {
     var recommandGroup : AnchorGroup = AnchorGroup()
     var pretteyGroup : AnchorGroup = AnchorGroup()
     var cycles : [CycleModel] = [CycleModel]()
@@ -62,27 +61,11 @@ extension RecommadViewModel {
         
         //3.请求后面的数据http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1480748073
         dispathG.enter()
-        
-        NetworkTool.shareInstance.reqest(method: .GET, url: "http://capi.douyucdn.cn/api/v1/getHotCate", params: params, finished: {response,error in
+        loadAnchorGroupData(url: "http://capi.douyucdn.cn/api/v1/getHotCate", params: params, finish: {
             
-            guard let response = response else{
-                return
-            }
-            
-            guard  let data = response["data"] as? [[String:Any]] else{ return }
-            
-            for dict in data
-            {
-                let anchorGroup = AnchorGroup(dict: dict)
-                anchorGroup.groupIcon = "home_header_normal"
-                if anchorGroup.AnchorGroups.count > 0 {
-                    self.anchorGroups.append(anchorGroup)
-                }
-                
-            }
             dispathG.leave()
-            
         })
+        
         
         dispathG.notify(queue: DispatchQueue.main, execute: {
             

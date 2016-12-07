@@ -14,10 +14,10 @@ class GameViewModel {
     
     func loadGameData(finish:  @escaping () -> ()) {
         
-        NetworkTool.shareInstance.reqest(method: .GET, url: "http://capi.douyucdn.cn/api/v1/getColumnDetail", params: ["shortName" : "game"], finished: { result, error in
+        NetworkTool.shareInstance.reqest(method: .GET, url: "http://capi.douyucdn.cn/api/v1/getColumnDetail", params: ["shortName" : "game"], finished: { response, error in
             
             // 1.获取到数据
-            guard let result = result else { return}
+            guard let result = response else { return}
             
             guard let dataArray = result["data"] as? [[String : Any]] else { return }
             
@@ -34,3 +34,14 @@ class GameViewModel {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
