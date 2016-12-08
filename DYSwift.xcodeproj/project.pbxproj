@@ -13,6 +13,10 @@
 		37553FBC1DF29CEB008D978D /* RecommadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37553FBB1DF29CEB008D978D /* RecommadViewModel.swift */; };
 		37553FBE1DF29D73008D978D /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37553FBD1DF29D73008D978D /* NSDate-Extension.swift */; };
 		37553FC01DF2A7A5008D978D /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37553FBF1DF2A7A5008D978D /* AnchorGroup.swift */; };
+		3776BCED1DF90E0E004B5564 /* MenueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3776BCEC1DF90E0E004B5564 /* MenueView.swift */; };
+		3776BCEF1DF90E1F004B5564 /* MenueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3776BCEE1DF90E1F004B5564 /* MenueView.xib */; };
+		3776BCF21DF95ACC004B5564 /* MenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3776BCF01DF95ACC004B5564 /* MenueCell.swift */; };
+		3776BCF31DF95ACC004B5564 /* MenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3776BCF11DF95ACC004B5564 /* MenueCell.xib */; };
 		37883A0F1DF64E3500B36C60 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37883A0E1DF64E3500B36C60 /* CycleModel.swift */; };
 		37883A121DF6552C00B36C60 /* CycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37883A101DF6552C00B36C60 /* CycleCell.swift */; };
 		37883A131DF6552C00B36C60 /* CycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37883A111DF6552C00B36C60 /* CycleCell.xib */; };
@@ -63,6 +67,10 @@
 		37553FBB1DF29CEB008D978D /* RecommadViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommadViewModel.swift; sourceTree = "<group>"; };
 		37553FBD1DF29D73008D978D /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		37553FBF1DF2A7A5008D978D /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		3776BCEC1DF90E0E004B5564 /* MenueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenueView.swift; sourceTree = "<group>"; };
+		3776BCEE1DF90E1F004B5564 /* MenueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenueView.xib; sourceTree = "<group>"; };
+		3776BCF01DF95ACC004B5564 /* MenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenueCell.swift; sourceTree = "<group>"; };
+		3776BCF11DF95ACC004B5564 /* MenueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenueCell.xib; sourceTree = "<group>"; };
 		37883A0E1DF64E3500B36C60 /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		37883A101DF6552C00B36C60 /* CycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleCell.swift; sourceTree = "<group>"; };
 		37883A111DF6552C00B36C60 /* CycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleCell.xib; sourceTree = "<group>"; };
@@ -203,9 +211,13 @@
 				37C5D15A1DF1551800671C04 /* CollectionHeader.swift */,
 				37C5D15B1DF1551800671C04 /* CollectionHeader.xib */,
 				37883A141DF671B000B36C60 /* GameView.swift */,
+				37883A1A1DF672FD00B36C60 /* GameView.xib */,
 				37883A1C1DF6919900B36C60 /* GameCell.swift */,
 				37883A1D1DF6919900B36C60 /* GameCell.xib */,
-				37883A1A1DF672FD00B36C60 /* GameView.xib */,
+				3776BCEC1DF90E0E004B5564 /* MenueView.swift */,
+				3776BCEE1DF90E1F004B5564 /* MenueView.xib */,
+				3776BCF01DF95ACC004B5564 /* MenueCell.swift */,
+				3776BCF11DF95ACC004B5564 /* MenueCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -487,12 +499,14 @@
 				379C7DDC1DEE7AF600DB3A74 /* Home.storyboard in Resources */,
 				379C7DE31DEE7B7100DB3A74 /* Own.storyboard in Resources */,
 				37E0A1B51DF54D15007212EE /* MakerCycleView.xib in Resources */,
+				3776BCF31DF95ACC004B5564 /* MenueCell.xib in Resources */,
 				37883A131DF6552C00B36C60 /* CycleCell.xib in Resources */,
 				37C5D15D1DF1551800671C04 /* CollectionHeader.xib in Resources */,
 				379C7DE11DEE7B5200DB3A74 /* Cared.storyboard in Resources */,
 				37883A1B1DF672FD00B36C60 /* GameView.xib in Resources */,
 				37883A1F1DF6919900B36C60 /* GameCell.xib in Resources */,
 				37C5D1651DF1697A00671C04 /* PrettyCollectionCell.xib in Resources */,
+				3776BCEF1DF90E1F004B5564 /* MenueView.xib in Resources */,
 				379C7DC11DEE73B000DB3A74 /* Assets.xcassets in Resources */,
 				379C7DDE1DEE7B1D00DB3A74 /* Live.storyboard in Resources */,
 				37C5D1611DF15AE200671C04 /* NormalCollectionCell.xib in Resources */,
@@ -567,6 +581,7 @@
 				374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */,
 				379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */,
 				379C7DBA1DEE73B000DB3A74 /* AppDelegate.swift in Sources */,
+				3776BCF21DF95ACC004B5564 /* MenueCell.swift in Sources */,
 				37883A1E1DF6919900B36C60 /* GameCell.swift in Sources */,
 				37B9AE7A1DF80F4C00DBFE95 /* BaseViewModel.swift in Sources */,
 				37B9AE7C1DF81A0200DBFE95 /* BaseAnchorGroupVC.swift in Sources */,
@@ -577,6 +592,7 @@
 				37553FBE1DF29D73008D978D /* NSDate-Extension.swift in Sources */,
 				37553FBC1DF29CEB008D978D /* RecommadViewModel.swift in Sources */,
 				37C5D1641DF1697A00671C04 /* PrettyCollectionCell.swift in Sources */,
+				3776BCED1DF90E0E004B5564 /* MenueView.swift in Sources */,
 				37C5D15C1DF1551800671C04 /* CollectionHeader.swift in Sources */,
 				37883A271DF6B3D100B36C60 /* GameBaseModel.swift in Sources */,
 				37883A251DF6B07F00B36C60 /* GameModel.swift in Sources */,
@@ -640,6 +656,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -689,6 +706,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -717,6 +735,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82C1D8B909DE2736D2ED9F65 /* Pods-DYSwift.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = KY98ADSRDF;
@@ -744,6 +763,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B3EBFD3931A0A9C8A893FB44 /* Pods-DYSwift.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = KY98ADSRDF;

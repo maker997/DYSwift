@@ -8,8 +8,8 @@
 
 import UIKit
 
-fileprivate let itemWidth = (screenWidth - 2*itemMargin)/3
-fileprivate let itemHeight = itemWidth*6/5
+fileprivate let GameitemWidth = (screenWidth - 2*itemMargin)/3
+fileprivate let itemHeight = GameitemWidth*6/5
 let gameVCCellId = "gameVCCellId"
 fileprivate let gameHeaderId = "gameHeaderId"
 
@@ -18,7 +18,7 @@ class GameVC: UIViewController {
     // CollectionView
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
+        layout.itemSize = CGSize(width: GameitemWidth, height: itemHeight)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsetsMake(0, itemMargin, 0, itemMargin)

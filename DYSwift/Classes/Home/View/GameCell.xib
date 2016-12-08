@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfr-Qv-4pg">
-                        <rect key="frame" x="148" y="112" width="50" height="14.5"/>
+                        <rect key="frame" x="148" y="109" width="50" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_more_btn" translatesAutoresizingMaskIntoConstraints="NO" id="o8y-5n-kU2">
-                        <rect key="frame" x="150" y="62" width="45" height="45"/>
+                        <rect key="frame" x="150" y="57" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="I1Q-dy-KnT"/>
                             <constraint firstAttribute="height" constant="45" id="zZa-eV-XaS"/>
@@ -51,8 +51,8 @@
                 <constraint firstAttribute="bottom" secondItem="Yff-tX-DYr" secondAttribute="bottom" constant="-1" id="KM5-7w-c6f"/>
                 <constraint firstItem="o8y-5n-kU2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="S0s-Ob-8Gj"/>
                 <constraint firstAttribute="trailing" secondItem="Yff-tX-DYr" secondAttribute="trailing" id="bnt-2I-fQ5"/>
-                <constraint firstItem="o8y-5n-kU2" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="fEE-oa-Bfr"/>
-                <constraint firstItem="Zfr-Qv-4pg" firstAttribute="top" secondItem="o8y-5n-kU2" secondAttribute="bottom" constant="5" id="ySm-Fq-fZe"/>
+                <constraint firstItem="o8y-5n-kU2" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-5" id="fEE-oa-Bfr"/>
+                <constraint firstItem="Zfr-Qv-4pg" firstAttribute="top" secondItem="o8y-5n-kU2" secondAttribute="bottom" constant="7" id="ySm-Fq-fZe"/>
             </constraints>
             <size key="customSize" width="345" height="169"/>
             <connections>

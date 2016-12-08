@@ -8,14 +8,18 @@
 
 import UIKit
 
-fileprivate let itemWidth = (screenWidth - 3*itemMargin)/2
+let AnchorItemWidth = (screenWidth - 3*itemMargin)/2
+let SectionHeadH: CGFloat = 50.0
+let NormalCellId = "NormalCellId"
+let PrettyCellId = "PrettyCellId"
+let SectionHeadId = "SectionHeadId"
 
 class BaseAnchorGroupVC: UIViewController {
     
     //collectionView
      lazy var collectionView: UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: itemWidth, height: itemWidth*0.75)
+        layout.itemSize = CGSize(width: AnchorItemWidth, height: AnchorItemWidth*0.75)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = itemMargin
         layout.headerReferenceSize = CGSize(width: screenWidth, height: SectionHeadH)
@@ -32,7 +36,6 @@ class BaseAnchorGroupVC: UIViewController {
         collect.backgroundColor = UIColor.white
         collect.showsVerticalScrollIndicator = false
         collect.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        collect.contentInset = UIEdgeInsetsMake(CycleH + GameviewH, 0, 0, 0)
         return collect
         }()
     

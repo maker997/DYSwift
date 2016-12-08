@@ -9,65 +9,35 @@
 import UIKit
 
 //MARK:==========常量==========
-fileprivate let itemWidth = (screenWidth - 3*itemMargin)/2
-let SectionHeadH: CGFloat = 50.0
-let NormalCellId = "NormalCellId"
-let PrettyCellId = "PrettyCellId"
-let SectionHeadId = "SectionHeadId"
-let CycleH = screenWidth/8*3
+fileprivate let CycleH = screenWidth/8*3
 let GameviewH : CGFloat = 90
 
-
-
-class RecommandVC: UIViewController {
-    fileprivate lazy var viewModel : RecommadViewModel = RecommadViewModel()
+class RecommandVC: BaseAnchorGroupVC {
+    //viewModel
+    fileprivate lazy var RecommadModel : RecommadViewModel = RecommadViewModel()
+    
+    //cycleView
     fileprivate lazy var cycleView : MakerCycleView = {
         let cycleView = MakerCycleView.getCycleView()
         cycleView.frame = CGRect(x: 0, y: -(CycleH + GameviewH), width: screenWidth, height: CycleH)
         return cycleView
     }()
+    
+    //gameView
     fileprivate lazy var gameView : GameView = {
         let game = GameView.getGameView()
         game.frame = CGRect(x: 0, y: -GameviewH, width: screenWidth, height: GameviewH)
         return game
     }()
     
-    fileprivate lazy var collectionView: UICollectionView = {[unowned self] in
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: itemWidth, height: itemWidth*0.75)
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = itemMargin
-        layout.headerReferenceSize = CGSize(width: screenWidth, height: SectionHeadH)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: itemMargin, bottom: 0, right: itemMargin)
-        
-        
-        let collect = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
-        collect.dataSource = self
-        collect.delegate = self
-        collect.register(UINib(nibName: "CollectionHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: SectionHeadId)
-        collect.register(UINib(nibName: "NormalCollectionCell", bundle: nil), forCellWithReuseIdentifier: NormalCellId)
-        collect.register(UINib(nibName: "PrettyCollectionCell", bundle: nil), forCellWithReuseIdentifier: PrettyCellId)
-        collect.backgroundColor = UIColor.white
-        collect.showsVerticalScrollIndicator = false
-        collect.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        collect.contentInset = UIEdgeInsetsMake(CycleH + GameviewH, 0, 0, 0)
-        return collect
-    }()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupUI()
-        
-        loadData()
-    }
 }
-
 
 //MARK:==========设置 UI==========
 extension RecommandVC{
-    fileprivate func setupUI(){
-        //1.添加 collectionView
-        view.addSubview(collectionView)
+    override func setupUI(){
+        
+        //1.调用父类的设置界面
+        super.setupUI()
         
         //2.往集合视图中添加轮播
         collectionView.addSubview(cycleView)
@@ -75,19 +45,25 @@ extension RecommandVC{
         //3.添加推荐游戏视图
         collectionView.addSubview(gameView)
         
+        //4.设置 collectionView 内边距
+        collectionView.contentInset = UIEdgeInsetsMake(CycleH + GameviewH, 0, 0, 0)
     }
 }
 
 //MARK:==========请求数据==========
 extension RecommandVC {
-    func loadData() {
+    override func loadData() {
+        
+        //1.给父类工具类赋值
+        viewModel = RecommadModel
+        
         //发送网络请求
-        viewModel.getData {
+        RecommadModel.getData {
             //1.显示 collectionView 的数据
             self.collectionView.reloadData()
             
             //2.处理数据显示推荐游戏
-            var tempAnchorGroup = self.viewModel.anchorGroups
+            var tempAnchorGroup = self.RecommadModel.anchorGroups
             tempAnchorGroup.removeFirst()
             tempAnchorGroup.removeFirst()
             
@@ -99,27 +75,18 @@ extension RecommandVC {
         }
         
         //请求轮播的数据
-        viewModel.getCycleData {
-            self.cycleView.cycleModels = self.viewModel.cycles
+        RecommadModel.getCycleData {
+            self.cycleView.cycleModels = self.RecommadModel.cycles
         }
     }
     
 }
 
 //MARK:==========collectionView 代理==========
-extension RecommandVC : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return viewModel.anchorGroups.count
-    }
+extension RecommandVC {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let anchorGroup = viewModel.anchorGroups[section]
-        
-        return anchorGroup.AnchorGroups.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    //设置 cell 不同样式
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         
         if indexPath.section == 1 {
@@ -136,18 +103,12 @@ extension RecommandVC : UICollectionViewDataSource,UICollectionViewDelegateFlowL
     
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeadId, for: indexPath) as! CollectionHeader
-        headerView.group = viewModel.anchorGroups[indexPath.section]
-        return headerView
-    }
-    
     //MARK:==========布局==========
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         if indexPath.section == 1 {
-            return CGSize(width: itemWidth, height: itemWidth * 1.25)
+            return CGSize(width: AnchorItemWidth, height: AnchorItemWidth * 1.25)
         }
-        return CGSize(width: itemWidth, height: itemWidth * 0.75)
+        return CGSize(width: AnchorItemWidth, height: AnchorItemWidth * 0.75)
     }
 }
 
