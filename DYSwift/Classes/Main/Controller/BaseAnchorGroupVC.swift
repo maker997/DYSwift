@@ -68,10 +68,18 @@ extension BaseAnchorGroupVC {
 extension BaseAnchorGroupVC:UICollectionViewDataSource,UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if viewModel == nil {
+            return 1
+        }
         return viewModel.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if viewModel == nil {
+            return 20
+        }
+        
         let groups = viewModel.anchorGroups[section]
         
         return groups.AnchorGroups.count
@@ -79,6 +87,9 @@ extension BaseAnchorGroupVC:UICollectionViewDataSource,UICollectionViewDelegate 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: NormalCellId, for: indexPath) as! NormalCollectionCell
         
+        if viewModel == nil {
+            return cell
+        }
         let groups = viewModel.anchorGroups[indexPath.section]
         
         cell.anchor = groups.AnchorGroups[indexPath.item]

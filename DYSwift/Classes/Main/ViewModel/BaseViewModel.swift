@@ -8,26 +8,35 @@
 
 import UIKit
 
-class BaseViewModel: NSObject {
+class BaseViewModel{
     var anchorGroups : [AnchorGroup] = [AnchorGroup]()
 }
 
 extension BaseViewModel{
-    func loadAnchorGroupData(url:String,params:[String:Any]?=nil,finish: @escaping () -> ()) {
+    func loadAnchorGroupData(isGroup:Bool, url:String,params:[String:Any]?=nil,finish: @escaping () -> ()) {
         
         NetworkTool.shareInstance.reqest(method: .GET, url: url,params: params,finished: { response ,error in
             
             guard let response = response else { return}
             guard let data = (response["data"] as? [[String:Any]]) else { return }
             
-            for dict in data {
-                let groups = AnchorGroup(dict: dict)
-                groups.groupIcon = "home_header_normal"
-                if groups.AnchorGroups.count > 0 {
-                    self.anchorGroups.append(groups)
+            if isGroup{
+                for dict in data {
+                    let groups = AnchorGroup(dict: dict)
+                    groups.groupIcon = "home_header_normal"
+                    if groups.AnchorGroups.count > 0 {
+                        self.anchorGroups.append(groups)
+                    }
                 }
+            }else{
+                let group = AnchorGroup()
+                for dict in data {
+                    let anchor = AnchorModel(dict: dict)
+                    group.AnchorGroups.append(anchor)
+                }
+                self.anchorGroups.append(group)
             }
-    
+            
             finish()
         })
 

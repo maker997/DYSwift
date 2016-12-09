@@ -83,7 +83,7 @@ extension RecommandVC {
 }
 
 //MARK:==========collectionView 代理==========
-extension RecommandVC {
+extension RecommandVC: UICollectionViewDelegateFlowLayout {
     
     //设置 cell 不同样式
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

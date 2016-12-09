@@ -61,7 +61,7 @@ extension RecommadViewModel {
         
         //3.请求后面的数据http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1480748073
         dispathG.enter()
-        loadAnchorGroupData(url: "http://capi.douyucdn.cn/api/v1/getHotCate", params: params, finish: {
+        loadAnchorGroupData(isGroup: true,url: "http://capi.douyucdn.cn/api/v1/getHotCate", params: params, finish: {
             
             dispathG.leave()
         })

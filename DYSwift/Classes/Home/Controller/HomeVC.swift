@@ -24,11 +24,8 @@ class HomeVC: UIViewController {
         chirlds.append(RecommandVC())
         chirlds.append(GameVC())
         chirlds.append(EntertainVC())
-        for _ in 0..<2 {
-           let chirld = UIViewController()
-           chirlds.append(chirld)
-           chirld.view.backgroundColor = UIColor.randomColor()
-        }
+        chirlds.append(MobileGameVC())
+        chirlds.append(FunnyVC())
         let content = ContentView(frame: rect, chirldVCS: chirlds, parent: self)
         return content
     }()
