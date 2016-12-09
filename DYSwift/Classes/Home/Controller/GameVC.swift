@@ -14,7 +14,7 @@ let gameVCCellId = "gameVCCellId"
 fileprivate let gameHeaderId = "gameHeaderId"
 
 
-class GameVC: UIViewController {
+class GameVC: BaseVC {
     // CollectionView
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
@@ -68,7 +68,9 @@ class GameVC: UIViewController {
 
 //MARK:==========设置 UI==========
 extension GameVC {
-    fileprivate func setupUI() {
+    override func setupUI() {
+        //0.给父类中 contentView 赋值
+        contentView = collectionView
         
         //1.添加 CollectionView
         view.addSubview(collectionView)
@@ -79,13 +81,17 @@ extension GameVC {
         //3.推荐游戏
         collectionView.addSubview(gameView)
         
+        super.setupUI()
+        
+
+        
     }
 }
 //MARK:==========请求数据==========
 extension GameVC {
     func loadData() {
-        //加载数据
         viewModel.loadGameData { [unowned self] in
+            self.finishLoadData()
             
             //1.加载 collectionView的数据
             self.collectionView.reloadData()

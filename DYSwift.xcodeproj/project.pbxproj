@@ -44,6 +44,10 @@
 		37AD86FF1DFA5D0C0026DE86 /* FunnyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD86FE1DFA5D0C0026DE86 /* FunnyVC.swift */; };
 		37AD87011DFA5DBF0026DE86 /* MobileGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD87001DFA5DBF0026DE86 /* MobileGameVC.swift */; };
 		37AD87031DFA65130026DE86 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD87021DFA65130026DE86 /* FunnyViewModel.swift */; };
+		37AD87051DFA819A0026DE86 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD87041DFA819A0026DE86 /* BaseVC.swift */; };
+		37AD870A1DFA922E0026DE86 /* ShowRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD87091DFA922E0026DE86 /* ShowRoomVC.swift */; };
+		37AD870C1DFA92490026DE86 /* NormalRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD870B1DFA92490026DE86 /* NormalRoomVC.swift */; };
+		37AD870E1DFA96D60026DE86 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD870D1DFA96D60026DE86 /* CustomNavigationController.swift */; };
 		37B716621DF2B18200C819D3 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B716611DF2B18200C819D3 /* AnchorModel.swift */; };
 		37B9AE761DF7FAEC00DBFE95 /* EntertainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9AE751DF7FAEC00DBFE95 /* EntertainVC.swift */; };
 		37B9AE781DF8017C00DBFE95 /* EntertainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9AE771DF8017C00DBFE95 /* EntertainViewModel.swift */; };
@@ -103,6 +107,10 @@
 		37AD86FE1DFA5D0C0026DE86 /* FunnyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyVC.swift; sourceTree = "<group>"; };
 		37AD87001DFA5DBF0026DE86 /* MobileGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileGameVC.swift; sourceTree = "<group>"; };
 		37AD87021DFA65130026DE86 /* FunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
+		37AD87041DFA819A0026DE86 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		37AD87091DFA922E0026DE86 /* ShowRoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRoomVC.swift; sourceTree = "<group>"; };
+		37AD870B1DFA92490026DE86 /* NormalRoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalRoomVC.swift; sourceTree = "<group>"; };
+		37AD870D1DFA96D60026DE86 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		37B716611DF2B18200C819D3 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		37B9AE751DF7FAEC00DBFE95 /* EntertainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntertainVC.swift; sourceTree = "<group>"; };
 		37B9AE771DF8017C00DBFE95 /* EntertainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntertainViewModel.swift; sourceTree = "<group>"; };
@@ -256,7 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				379C7DEE1DEE7CFD00DB3A74 /* RootTabBarVC.swift */,
+				37AD870D1DFA96D60026DE86 /* CustomNavigationController.swift */,
 				37B9AE7B1DF81A0200DBFE95 /* BaseAnchorGroupVC.swift */,
+				37AD87041DFA819A0026DE86 /* BaseVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +311,9 @@
 		379C7DD61DEE7AB000DB3A74 /* Room */ = {
 			isa = PBXGroup;
 			children = (
+				37AD87061DFA920C0026DE86 /* model */,
+				37AD87071DFA920C0026DE86 /* view */,
+				37AD87081DFA920C0026DE86 /* viewModel */,
 				379C7DD71DEE7AB000DB3A74 /* Controller */,
 			);
 			path = Room;
@@ -310,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				379C7DDD1DEE7B1D00DB3A74 /* Live.storyboard */,
+				37AD87091DFA922E0026DE86 /* ShowRoomVC.swift */,
+				37AD870B1DFA92490026DE86 /* NormalRoomVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +425,27 @@
 			sourceTree = "<group>";
 		};
 		379C7DED1DEE7C1A00DB3A74 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		37AD87061DFA920C0026DE86 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		37AD87071DFA920C0026DE86 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		37AD87081DFA920C0026DE86 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -591,19 +627,23 @@
 				37E0A1B31DF54CF9007212EE /* MakerCycleView.swift in Sources */,
 				374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */,
 				379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */,
+				37AD870E1DFA96D60026DE86 /* CustomNavigationController.swift in Sources */,
 				379C7DBA1DEE73B000DB3A74 /* AppDelegate.swift in Sources */,
 				3776BCF21DF95ACC004B5564 /* MenueCell.swift in Sources */,
 				37883A1E1DF6919900B36C60 /* GameCell.swift in Sources */,
 				37B9AE7A1DF80F4C00DBFE95 /* BaseViewModel.swift in Sources */,
+				37AD870A1DFA922E0026DE86 /* ShowRoomVC.swift in Sources */,
 				37B9AE7C1DF81A0200DBFE95 /* BaseAnchorGroupVC.swift in Sources */,
 				37553FC01DF2A7A5008D978D /* AnchorGroup.swift in Sources */,
 				37883A151DF671B000B36C60 /* GameView.swift in Sources */,
 				37B9AE761DF7FAEC00DBFE95 /* EntertainVC.swift in Sources */,
 				37C5D1561DF1296C00671C04 /* RecommandVC.swift in Sources */,
 				37553FBE1DF29D73008D978D /* NSDate-Extension.swift in Sources */,
+				37AD87051DFA819A0026DE86 /* BaseVC.swift in Sources */,
 				37553FBC1DF29CEB008D978D /* RecommadViewModel.swift in Sources */,
 				37C5D1641DF1697A00671C04 /* PrettyCollectionCell.swift in Sources */,
 				3776BCED1DF90E0E004B5564 /* MenueView.swift in Sources */,
+				37AD870C1DFA92490026DE86 /* NormalRoomVC.swift in Sources */,
 				37C5D15C1DF1551800671C04 /* CollectionHeader.swift in Sources */,
 				37883A271DF6B3D100B36C60 /* GameBaseModel.swift in Sources */,
 				37883A251DF6B07F00B36C60 /* GameModel.swift in Sources */,

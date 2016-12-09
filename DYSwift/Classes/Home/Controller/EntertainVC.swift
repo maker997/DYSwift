@@ -39,6 +39,7 @@ extension EntertainVC {
       viewModel = EntertainVM
     
         EntertainVM.loadEntertainData {
+            self.finishLoadData()
             
             self.collectionView.reloadData()
             

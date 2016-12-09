@@ -16,7 +16,7 @@ class AnchorModel: NSObject {
     var room_id : Int = 0       //房间 id
     var online : Int = 0        //在线人数
     var anchor_city : String?   //主播所在的城市
-    
+    var isVertical : Int = 0    //0:电脑直播 1: 手机直播
     
     init(dict : [String:Any]) {
         super.init()

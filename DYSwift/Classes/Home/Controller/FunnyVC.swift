@@ -34,7 +34,8 @@ extension FunnyVC{
     override func loadData() {
         viewModel = funnyVM
         
-        funnyVM.loadFunnyData { 
+        funnyVM.loadFunnyData {
+            self.finishLoadData()
             self.collectionView.reloadData()
         }
     }

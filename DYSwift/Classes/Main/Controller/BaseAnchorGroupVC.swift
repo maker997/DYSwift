@@ -14,7 +14,7 @@ let NormalCellId = "NormalCellId"
 let PrettyCellId = "PrettyCellId"
 let SectionHeadId = "SectionHeadId"
 
-class BaseAnchorGroupVC: UIViewController {
+class BaseAnchorGroupVC: BaseVC {
     
     //collectionView
      lazy var collectionView: UICollectionView = {[unowned self] in
@@ -58,14 +58,17 @@ extension BaseAnchorGroupVC {
 
 //MARK:==========设置 UI==========
 extension BaseAnchorGroupVC {
-    func setupUI() {
+    override func setupUI() {
+        contentView = collectionView
         view.addSubview(collectionView)
+        
+        super.setupUI()
         
     }
 }
 
 //MARK:==========collectionView 代理==========
-extension BaseAnchorGroupVC:UICollectionViewDataSource,UICollectionViewDelegate {
+extension BaseAnchorGroupVC:UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if viewModel == nil {
@@ -103,7 +106,29 @@ extension BaseAnchorGroupVC:UICollectionViewDataSource,UICollectionViewDelegate 
         
         return header
     }
+    
 }
 
+//MARK:==========collectionViewDegate==========
+extension BaseAnchorGroupVC :UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let anchor = viewModel.anchorGroups[indexPath.section].AnchorGroups[indexPath.item]
+        
+        anchor.isVertical == 0 ? pushNormalRoom() : presentShowRoom()
+    }
+    
+    fileprivate func presentShowRoom(){
+        let show = ShowRoomVC()
+        present(show, animated: true, completion: nil)
+        
+    }
+    
+    fileprivate func pushNormalRoom(){
+        let normal = NormalRoomVC()
+        
+        navigationController?.pushViewController(normal, animated: true)
+        
+    }
+}
 
 

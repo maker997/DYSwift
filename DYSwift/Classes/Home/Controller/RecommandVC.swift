@@ -54,11 +54,14 @@ extension RecommandVC{
 extension RecommandVC {
     override func loadData() {
         
+        
+        
         //1.给父类工具类赋值
         viewModel = RecommadModel
         
         //发送网络请求
         RecommadModel.getData {
+            self.finishLoadData()
             //1.显示 collectionView 的数据
             self.collectionView.reloadData()
             
