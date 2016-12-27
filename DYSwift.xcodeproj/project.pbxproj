@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A9AC9801E124A7A00EC297F /* AnchorListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AC97F1E124A7A00EC297F /* AnchorListVC.swift */; };
+		1A9AC9821E124E0400EC297F /* InkeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AC9811E124E0400EC297F /* InkeTitleView.swift */; };
+		1A9AC9841E1269DD00EC297F /* HotAnchorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AC9831E1269DD00EC297F /* HotAnchorVC.swift */; };
+		1A9AC9861E126DD000EC297F /* CaredAnchorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AC9851E126DD000EC297F /* CaredAnchorVC.swift */; };
 		374ADB0B1DEFC8A500794724 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374ADB0A1DEFC8A500794724 /* ContentView.swift */; };
 		374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374ADB0C1DEFD81800794724 /* UIColor-Extension.swift */; };
 		37553FBA1DF27D36008D978D /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37553FB91DF27D36008D978D /* NetworkTool.swift */; };
@@ -68,6 +72,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A9AC97F1E124A7A00EC297F /* AnchorListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorListVC.swift; sourceTree = "<group>"; };
+		1A9AC9811E124E0400EC297F /* InkeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InkeTitleView.swift; sourceTree = "<group>"; };
+		1A9AC9831E1269DD00EC297F /* HotAnchorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotAnchorVC.swift; sourceTree = "<group>"; };
+		1A9AC9851E126DD000EC297F /* CaredAnchorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaredAnchorVC.swift; sourceTree = "<group>"; };
 		374ADB0A1DEFC8A500794724 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		374ADB0C1DEFD81800794724 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		37553FB91DF27D36008D978D /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
@@ -325,6 +333,9 @@
 				379C7DDD1DEE7B1D00DB3A74 /* Live.storyboard */,
 				37AD87091DFA922E0026DE86 /* ShowRoomVC.swift */,
 				37AD870B1DFA92490026DE86 /* NormalRoomVC.swift */,
+				1A9AC97F1E124A7A00EC297F /* AnchorListVC.swift */,
+				1A9AC9831E1269DD00EC297F /* HotAnchorVC.swift */,
+				1A9AC9851E126DD000EC297F /* CaredAnchorVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,6 +452,7 @@
 		37AD87071DFA920C0026DE86 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1A9AC9811E124E0400EC297F /* InkeTitleView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -619,13 +631,16 @@
 				37AD86FF1DFA5D0C0026DE86 /* FunnyVC.swift in Sources */,
 				379C7DEF1DEE7CFD00DB3A74 /* RootTabBarVC.swift in Sources */,
 				37553FBA1DF27D36008D978D /* NetworkTool.swift in Sources */,
+				1A9AC9861E126DD000EC297F /* CaredAnchorVC.swift in Sources */,
 				37C5D1601DF15AE200671C04 /* NormalCollectionCell.swift in Sources */,
 				374ADB0B1DEFC8A500794724 /* ContentView.swift in Sources */,
+				1A9AC9801E124A7A00EC297F /* AnchorListVC.swift in Sources */,
 				379C7DF31DEEB0D600DB3A74 /* HomeVC.swift in Sources */,
 				37883A231DF6AEBD00B36C60 /* GameViewModel.swift in Sources */,
 				37883A0F1DF64E3500B36C60 /* CycleModel.swift in Sources */,
 				37E0A1B31DF54CF9007212EE /* MakerCycleView.swift in Sources */,
 				374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */,
+				1A9AC9821E124E0400EC297F /* InkeTitleView.swift in Sources */,
 				379C7DF91DEED4F500DB3A74 /* UIView-Extension.swift in Sources */,
 				37AD870E1DFA96D60026DE86 /* CustomNavigationController.swift in Sources */,
 				379C7DBA1DEE73B000DB3A74 /* AppDelegate.swift in Sources */,
@@ -639,6 +654,7 @@
 				37B9AE761DF7FAEC00DBFE95 /* EntertainVC.swift in Sources */,
 				37C5D1561DF1296C00671C04 /* RecommandVC.swift in Sources */,
 				37553FBE1DF29D73008D978D /* NSDate-Extension.swift in Sources */,
+				1A9AC9841E1269DD00EC297F /* HotAnchorVC.swift in Sources */,
 				37AD87051DFA819A0026DE86 /* BaseVC.swift in Sources */,
 				37553FBC1DF29CEB008D978D /* RecommadViewModel.swift in Sources */,
 				37C5D1641DF1697A00671C04 /* PrettyCollectionCell.swift in Sources */,

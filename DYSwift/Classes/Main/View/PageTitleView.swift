@@ -25,11 +25,15 @@ class PageTitleView: UIView {
     lazy var indicatorView : UIView = UIView()      //指示器
     lazy var titleLbls : [UILabel] = [UILabel]()    //标签数组
     weak var delegate : headerClickDelegate?        //代理
+    var DefulteTitleColor : UIColor? {              //设置文字默认颜色
+        didSet{
+            setTitleColor()
+        }
+    }
 
     lazy var scrollView : UIScrollView = {          //容器
        let sv = UIScrollView()
        sv.isPagingEnabled = false
-       sv.bounces = false
        return sv
     }()
     
@@ -53,9 +57,10 @@ extension PageTitleView{
         //1.设置容器
         addSubview(scrollView)
         scrollView.frame = bounds
+        scrollView.showsHorizontalScrollIndicator = false
         
         //2.设置容器中 label
-        let width = screenWidth/CGFloat(titles.count)
+        let width = frame.width / 4.0
         let height = frame.height - lineH - indicatorH
         
         for (index,title) in titles.enumerated() {
@@ -81,6 +86,7 @@ extension PageTitleView{
             lbl.frame = CGRect(x: x, y: 0, width: width, height: height)
             scrollView.addSubview(lbl)
         }
+        scrollView.contentSize.width = width * CGFloat(titles.count)
         
         //3.创建底部的线
         let lineView = UIView()
@@ -95,7 +101,6 @@ extension PageTitleView{
         indicatorView.frame = CGRect(x: 0, y: indicatorY, width: width, height: indicatorH)
         indicatorView.backgroundColor = UIColor.orange
     }
-    
 }
 
 //MARK:==========点击事件==========
@@ -109,7 +114,13 @@ extension PageTitleView{
         
         //2.设置其他标签,和当前标签
         for label in titleLbls {
-            label.textColor = UIColor(r: NormalColor.0, g: NormalColor.1, b: NormalColor.2)
+            
+            if DefulteTitleColor != nil {
+                label.textColor = DefulteTitleColor
+            }else
+            {
+                label.textColor = UIColor(r: NormalColor.0, g: NormalColor.1, b: NormalColor.2)
+            }
         }
         let currentLbl = titleLbls[lbl.tag]
         currentLbl.textColor = UIColor(r: SelectColor.0, g: SelectColor.1, b: SelectColor.2)
@@ -149,6 +160,15 @@ extension PageTitleView: scrollProgressDelegate{
     }
 }
 
+//MARK: ====== 私有方法 ======
+extension PageTitleView{
+    
+    fileprivate func setTitleColor() {
+        for label in titleLbls {
+            label.textColor = DefulteTitleColor
+        }
+    }
+}
 
 
 
