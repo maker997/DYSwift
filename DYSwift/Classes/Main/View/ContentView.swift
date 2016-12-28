@@ -11,6 +11,7 @@ import UIKit
 //MARK:==========协议==========
 protocol scrollProgressDelegate : NSObjectProtocol {
     func scrollProgress(_ progress: CGFloat,target: Int, source:Int)
+    func contentViewDidEndDecelerating(target: CGFloat)
 }
 
 //MARK:==========常量==========
@@ -93,33 +94,49 @@ extension ContentView : UICollectionViewDelegate,UICollectionViewDataSource{
         if isClick {
             return
         }
-        //判断是左右滑动
-        var progress : CGFloat = 0.0
-        var source : Int = 0
-        var target : Int = 0
-        
         let width = scrollView.bounds.size.width
+        let array = getScrollViewTargetAndSource(scrollView: scrollView)
+        var progress = (startOffsetX - scrollView.contentOffset.x) / width
+        progress = progress > 0 ? progress : -progress
+        
+        self.delegate?.scrollProgress(progress, target: array[0], source: array[1])
+    }
+    
+    //最终完成拖拽的时机
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let finishIndex = scrollView.contentOffset.x / screenWidth
+        
+        delegate?.contentViewDidEndDecelerating(target: finishIndex)
+    }
+
+    
+    //抽取个方法来计算的target
+    fileprivate func getScrollViewTargetAndSource(scrollView: UIScrollView) -> [Int]
+    {
+        let width = scrollView.bounds.size.width
+        var target: Int = 0
+        var source: Int = 0
+        
+        
         if scrollView.contentOffset.x < startOffsetX {
             //向右滑动
-            progress = (startOffsetX - scrollView.contentOffset.x) / width
-            
             target = Int(floor(scrollView.contentOffset.x / width))
+            
             source = target + 1
             if target <= 0 {
                 target = 0
             }
         }else{
-            progress = (scrollView.contentOffset.x - startOffsetX ) / width
             
             source = Int(floor(startOffsetX / width))
             target = source + 1
+
             if target >= chirlds!.count {
                 target = chirlds!.count - 1
             }
         }
         
-        self.delegate?.scrollProgress(progress, target: target, source: source)
-
+        return [target,source]
     }
 }
 

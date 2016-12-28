@@ -19,7 +19,7 @@ class AnchorListVC: UIViewController {
         chirlds.append(careVc)
         let hotVc = HotAnchorVC()
         chirlds.append(hotVc)
-        for i in 0 ..< 2 {
+        for i in 0 ..< 3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.randomColor()
             chirlds.append(vc)
@@ -50,6 +50,8 @@ extension AnchorListVC
         
         //3. 设置代理
         heardView.titleView.delegate = self
+        contentView.delegate = heardView.titleView
+        
     }
 }
 
@@ -59,6 +61,8 @@ extension AnchorListVC: headerClickDelegate
     func titleClick(_ headView: PageTitleView, index: Int) {
         contentView.setOffset(index)
     }
+    
+    
 }
 
 

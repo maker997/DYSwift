@@ -11,7 +11,7 @@ import UIKit
 //MARK:==========常量==========
 let lineH : CGFloat = 0.5
 let indicatorH : CGFloat = 1.5
-let NormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
+var NormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
 let SelectColor : (CGFloat,CGFloat,CGFloat) = (255, 128, 0)
 
 //MARK:==========定义代理==========
@@ -25,6 +25,8 @@ class PageTitleView: UIView {
     lazy var indicatorView : UIView = UIView()      //指示器
     lazy var titleLbls : [UILabel] = [UILabel]()    //标签数组
     weak var delegate : headerClickDelegate?        //代理
+    var titleWidth : CGFloat = 0.0                  //标签的宽度
+    
     var DefulteTitleColor : UIColor? {              //设置文字默认颜色
         didSet{
             setTitleColor()
@@ -61,6 +63,7 @@ extension PageTitleView{
         
         //2.设置容器中 label
         let width = frame.width / 4.0
+        titleWidth = width
         let height = frame.height - lineH - indicatorH
         
         for (index,title) in titles.enumerated() {
@@ -138,6 +141,13 @@ extension PageTitleView{
 
 //MARK:==========下面滚动视图的代理==========
 extension PageTitleView: scrollProgressDelegate{
+    internal func contentViewDidEndDecelerating(target: CGFloat) {
+        var offsetX = (target + 1.0) * titleWidth - self.bounds.width
+        offsetX = offsetX > 0 ? offsetX : 0
+        
+        scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+    }
+
     
     func scrollProgress(_ progress: CGFloat, target: Int, source: Int) {
         //1.取出要改变的 Label
@@ -149,14 +159,26 @@ extension PageTitleView: scrollProgressDelegate{
         indicatorView.setX(indictorX)
         
         //3.设置目标标签的渐变
-        let range = (SelectColor.0 - NormalColor.0,SelectColor.1 - NormalColor.1,SelectColor.2 - NormalColor.2)
-        let current = (NormalColor.0 + progress * range.0 ,NormalColor.1 + progress * range.1,NormalColor.2 + progress * range.2)
+        var range : (CGFloat,CGFloat,CGFloat) = (0.0,0,0)
+        var current : (CGFloat,CGFloat,CGFloat) = (0.0,0,0)
+        
+        if DefulteTitleColor != nil {
+            
+            range = (SelectColor.0 - 255.0,SelectColor.1 - 255.0,SelectColor.2 - 255.0)
+            current = (255.0 + progress * range.0 ,255.0 + progress * range.1,255.0 + progress * range.2)
+        }else{
+            range = (SelectColor.0 - NormalColor.0,SelectColor.1 - NormalColor.1,SelectColor.2 - NormalColor.2)
+            current = (NormalColor.0 + progress * range.0 ,NormalColor.1 + progress * range.1,NormalColor.2 + progress * range.2)
+        }
         targetLbl.textColor = UIColor(r: current.0, g: current.1, b: current.2)
         
         //4.设置正常的颜色
         let rang1 = (-range.0,-range.1,-range.2)
         let current1 = (SelectColor.0 + progress * (rang1.0) ,SelectColor.1 + progress * (rang1.1),SelectColor.2 + progress * (rang1.2))
+        
         sourceLbl.textColor = UIColor(r: current1.0, g: current1.1, b: current1.2)
+        
+        
     }
 }
 
@@ -164,7 +186,11 @@ extension PageTitleView: scrollProgressDelegate{
 extension PageTitleView{
     
     fileprivate func setTitleColor() {
-        for label in titleLbls {
+        for (index, label) in titleLbls.enumerated() {
+            if index == 0 {
+                label.textColor = UIColor(r: SelectColor.0, g: SelectColor.1, b: SelectColor.2)
+                continue
+            }
             label.textColor = DefulteTitleColor
         }
     }
