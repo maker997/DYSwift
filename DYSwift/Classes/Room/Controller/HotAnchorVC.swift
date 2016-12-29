@@ -26,6 +26,7 @@ extension HotAnchorVC{
         
         tableView.register(UINib(nibName: "InkeHotAnchorCell", bundle: nil), forCellReuseIdentifier: inkeHotAnchorCell)
         tableView.rowHeight = 465
+        tableView.separatorStyle = .none
     }
 }
 
@@ -54,12 +55,20 @@ extension HotAnchorVC{
         cell.anchorModel = dataSource?[indexPath.row];
         return cell
     }
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let model = dataSource?[indexPath.row];
-//    
-//        return model?.rowHeight ?? 0
-//        
-//    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let model = dataSource?[indexPath.row];
+    
+        return model?.rowHeight ?? 0
+        
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let room = LivingCollection()
+        room.dataSource = dataSource
+        room.indexPath = indexPath 
+        navigationController?.pushViewController(room, animated: true)
+    }
     
 }
 

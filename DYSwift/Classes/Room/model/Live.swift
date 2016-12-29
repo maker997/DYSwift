@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-class Live{
+class Live: NSObject{
 
 	var city : String!
 	var creator : Creator!

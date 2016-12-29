@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2987301E14B90D006F3A41 /* LivingCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A29872E1E14B90D006F3A41 /* LivingCollection.swift */; };
+		1A2987351E1503DA006F3A41 /* LivingRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2987341E1503DA006F3A41 /* LivingRoom.xib */; };
+		1A2987371E150710006F3A41 /* RoomToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2987361E150710006F3A41 /* RoomToolBar.swift */; };
+		1A29873B1E150ACA006F3A41 /* RoomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A29873A1E150ACA006F3A41 /* RoomToolBar.xib */; };
 		1A9AC9801E124A7A00EC297F /* AnchorListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AC97F1E124A7A00EC297F /* AnchorListVC.swift */; };
 		1A9AC9821E124E0400EC297F /* InkeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AC9811E124E0400EC297F /* InkeTitleView.swift */; };
 		1A9AC9841E1269DD00EC297F /* HotAnchorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9AC9831E1269DD00EC297F /* HotAnchorVC.swift */; };
@@ -17,6 +21,18 @@
 		1AF254AC1E1372B200A00955 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF254A91E1372B200A00955 /* Creator.swift */; };
 		1AF254AD1E1372B200A00955 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF254AA1E1372B200A00955 /* Live.swift */; };
 		1AF254AE1E1372B200A00955 /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF254AB1E1372B200A00955 /* RootClass.swift */; };
+		1AF254B01E13A8A800A00955 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254AF1E13A8A800A00955 /* IJKMediaFramework.framework */; };
+		1AF254B21E13A92600A00955 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254B11E13A92600A00955 /* AudioToolbox.framework */; };
+		1AF254B41E13A93200A00955 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254B31E13A93200A00955 /* AVFoundation.framework */; };
+		1AF254B61E13A93F00A00955 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254B51E13A93F00A00955 /* CoreMedia.framework */; };
+		1AF254B81E13A94A00A00955 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254B71E13A94A00A00955 /* CoreVideo.framework */; };
+		1AF254BA1E13A97900A00955 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254B91E13A97900A00955 /* libbz2.tbd */; };
+		1AF254BC1E13A98600A00955 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254BB1E13A98600A00955 /* libz.tbd */; };
+		1AF254BE1E13A99B00A00955 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254BD1E13A99B00A00955 /* MediaPlayer.framework */; };
+		1AF254C01E13A9AA00A00955 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254BF1E13A9AA00A00955 /* MobileCoreServices.framework */; };
+		1AF254C21E13A9B700A00955 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254C11E13A9B700A00955 /* OpenGLES.framework */; };
+		1AF254C41E13A9C700A00955 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF254C31E13A9C700A00955 /* VideoToolbox.framework */; };
+		1AF254CB1E13C19200A00955 /* LivingRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF254C91E13C19200A00955 /* LivingRoom.swift */; };
 		374ADB0B1DEFC8A500794724 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374ADB0A1DEFC8A500794724 /* ContentView.swift */; };
 		374ADB0D1DEFD81800794724 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374ADB0C1DEFD81800794724 /* UIColor-Extension.swift */; };
 		37553FBA1DF27D36008D978D /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37553FB91DF27D36008D978D /* NetworkTool.swift */; };
@@ -78,6 +94,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A29872E1E14B90D006F3A41 /* LivingCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivingCollection.swift; sourceTree = "<group>"; };
+		1A2987341E1503DA006F3A41 /* LivingRoom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LivingRoom.xib; path = ../Controller/LivingRoom.xib; sourceTree = "<group>"; };
+		1A2987361E150710006F3A41 /* RoomToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomToolBar.swift; sourceTree = "<group>"; };
+		1A29873A1E150ACA006F3A41 /* RoomToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomToolBar.xib; sourceTree = "<group>"; };
 		1A9AC97F1E124A7A00EC297F /* AnchorListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorListVC.swift; sourceTree = "<group>"; };
 		1A9AC9811E124E0400EC297F /* InkeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InkeTitleView.swift; sourceTree = "<group>"; };
 		1A9AC9831E1269DD00EC297F /* HotAnchorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotAnchorVC.swift; sourceTree = "<group>"; };
@@ -88,6 +108,18 @@
 		1AF254A91E1372B200A00955 /* Creator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		1AF254AA1E1372B200A00955 /* Live.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
 		1AF254AB1E1372B200A00955 /* RootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
+		1AF254AF1E13A8A800A00955 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		1AF254B11E13A92600A00955 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1AF254B31E13A93200A00955 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1AF254B51E13A93F00A00955 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1AF254B71E13A94A00A00955 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		1AF254B91E13A97900A00955 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		1AF254BB1E13A98600A00955 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1AF254BD1E13A99B00A00955 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1AF254BF1E13A9AA00A00955 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1AF254C11E13A9B700A00955 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1AF254C31E13A9C700A00955 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		1AF254C91E13C19200A00955 /* LivingRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LivingRoom.swift; path = ../Controller/LivingRoom.swift; sourceTree = "<group>"; };
 		374ADB0A1DEFC8A500794724 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		374ADB0C1DEFD81800794724 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		37553FB91DF27D36008D978D /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
@@ -157,6 +189,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF254C41E13A9C700A00955 /* VideoToolbox.framework in Frameworks */,
+				1AF254C21E13A9B700A00955 /* OpenGLES.framework in Frameworks */,
+				1AF254C01E13A9AA00A00955 /* MobileCoreServices.framework in Frameworks */,
+				1AF254BE1E13A99B00A00955 /* MediaPlayer.framework in Frameworks */,
+				1AF254BC1E13A98600A00955 /* libz.tbd in Frameworks */,
+				1AF254BA1E13A97900A00955 /* libbz2.tbd in Frameworks */,
+				1AF254B81E13A94A00A00955 /* CoreVideo.framework in Frameworks */,
+				1AF254B61E13A93F00A00955 /* CoreMedia.framework in Frameworks */,
+				1AF254B41E13A93200A00955 /* AVFoundation.framework in Frameworks */,
+				1AF254B21E13A92600A00955 /* AudioToolbox.framework in Frameworks */,
+				1AF254B01E13A8A800A00955 /* IJKMediaFramework.framework in Frameworks */,
 				37C5D1581DF14C4A00671C04 /* Reveal.framework in Frameworks */,
 				51ACD29CC13E47AFC642DB50 /* Pods_DYSwift.framework in Frameworks */,
 			);
@@ -345,6 +388,7 @@
 				379C7DDD1DEE7B1D00DB3A74 /* Live.storyboard */,
 				37AD87091DFA922E0026DE86 /* ShowRoomVC.swift */,
 				37AD870B1DFA92490026DE86 /* NormalRoomVC.swift */,
+				1A29872E1E14B90D006F3A41 /* LivingCollection.swift */,
 				1A9AC97F1E124A7A00EC297F /* AnchorListVC.swift */,
 				1A9AC9831E1269DD00EC297F /* HotAnchorVC.swift */,
 				1A9AC9851E126DD000EC297F /* CaredAnchorVC.swift */,
@@ -470,6 +514,10 @@
 				1A9AC9811E124E0400EC297F /* InkeTitleView.swift */,
 				1AF254A31E135F0900A00955 /* InkeHotAnchorCell.swift */,
 				1AF254A41E135F0900A00955 /* InkeHotAnchorCell.xib */,
+				1A2987361E150710006F3A41 /* RoomToolBar.swift */,
+				1A29873A1E150ACA006F3A41 /* RoomToolBar.xib */,
+				1AF254C91E13C19200A00955 /* LivingRoom.swift */,
+				1A2987341E1503DA006F3A41 /* LivingRoom.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -485,6 +533,7 @@
 		37C5D1591DF14C6300671C04 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				1AF254AF1E13A8A800A00955 /* IJKMediaFramework.framework */,
 				37C5D1571DF14C4A00671C04 /* Reveal.framework */,
 			);
 			path = libs;
@@ -502,6 +551,16 @@
 		6CA9A2896717A9356C7ECB06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AF254C31E13A9C700A00955 /* VideoToolbox.framework */,
+				1AF254C11E13A9B700A00955 /* OpenGLES.framework */,
+				1AF254BF1E13A9AA00A00955 /* MobileCoreServices.framework */,
+				1AF254BD1E13A99B00A00955 /* MediaPlayer.framework */,
+				1AF254BB1E13A98600A00955 /* libz.tbd */,
+				1AF254B91E13A97900A00955 /* libbz2.tbd */,
+				1AF254B71E13A94A00A00955 /* CoreVideo.framework */,
+				1AF254B51E13A93F00A00955 /* CoreMedia.framework */,
+				1AF254B31E13A93200A00955 /* AVFoundation.framework */,
+				1AF254B11E13A92600A00955 /* AudioToolbox.framework */,
 				5F8ED60AFE797BF73B5E5179 /* Pods_DYSwift.framework */,
 			);
 			name = Frameworks;
@@ -543,7 +602,7 @@
 					379C7DB51DEE73B000DB3A74 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = KY98ADSRDF;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -578,12 +637,14 @@
 				3776BCF31DF95ACC004B5564 /* MenueCell.xib in Resources */,
 				37883A131DF6552C00B36C60 /* CycleCell.xib in Resources */,
 				37C5D15D1DF1551800671C04 /* CollectionHeader.xib in Resources */,
+				1A2987351E1503DA006F3A41 /* LivingRoom.xib in Resources */,
 				379C7DE11DEE7B5200DB3A74 /* Cared.storyboard in Resources */,
 				37883A1B1DF672FD00B36C60 /* GameView.xib in Resources */,
 				37883A1F1DF6919900B36C60 /* GameCell.xib in Resources */,
 				37C5D1651DF1697A00671C04 /* PrettyCollectionCell.xib in Resources */,
 				3776BCEF1DF90E1F004B5564 /* MenueView.xib in Resources */,
 				379C7DC11DEE73B000DB3A74 /* Assets.xcassets in Resources */,
+				1A29873B1E150ACA006F3A41 /* RoomToolBar.xib in Resources */,
 				379C7DDE1DEE7B1D00DB3A74 /* Live.storyboard in Resources */,
 				37C5D1611DF15AE200671C04 /* NormalCollectionCell.xib in Resources */,
 				379C7DBF1DEE73B000DB3A74 /* Main.storyboard in Resources */,
@@ -679,9 +740,12 @@
 				1A9AC9841E1269DD00EC297F /* HotAnchorVC.swift in Sources */,
 				37AD87051DFA819A0026DE86 /* BaseVC.swift in Sources */,
 				37553FBC1DF29CEB008D978D /* RecommadViewModel.swift in Sources */,
+				1A2987371E150710006F3A41 /* RoomToolBar.swift in Sources */,
+				1AF254CB1E13C19200A00955 /* LivingRoom.swift in Sources */,
 				37C5D1641DF1697A00671C04 /* PrettyCollectionCell.swift in Sources */,
 				3776BCED1DF90E0E004B5564 /* MenueView.swift in Sources */,
 				37AD870C1DFA92490026DE86 /* NormalRoomVC.swift in Sources */,
+				1A2987301E14B90D006F3A41 /* LivingCollection.swift in Sources */,
 				37C5D15C1DF1551800671C04 /* CollectionHeader.swift in Sources */,
 				1AF254A81E136D9700A00955 /* InkeHotViewModel.swift in Sources */,
 				37883A271DF6B3D100B36C60 /* GameBaseModel.swift in Sources */,
@@ -830,10 +894,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = KY98ADSRDF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DYSwift",
+					"$(PROJECT_DIR)/DYSwift/Classes/Tools/libs",
 				);
 				INFOPLIST_FILE = DYSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -846,7 +913,10 @@
 				);
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = mengma.cn.DYSwift;
+				PRODUCT_MODULE_NAME = Live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -858,10 +928,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = KY98ADSRDF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DYSwift",
+					"$(PROJECT_DIR)/DYSwift/Classes/Tools/libs",
 				);
 				INFOPLIST_FILE = DYSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -873,7 +946,9 @@
 					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mengma.cn.DYSwift;
+				PRODUCT_MODULE_NAME = Live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

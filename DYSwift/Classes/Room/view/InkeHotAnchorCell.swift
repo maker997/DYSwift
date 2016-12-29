@@ -5,7 +5,16 @@
 //  Created by 刘甲奇 on 2016/12/28.
 //  Copyright © 2016年 maker. All rights reserved.
 //
-
+/*
+ 
+ cell 的高度计算
+ cell 的高度最后的取值 = bottomLine 的底部 y
+ 所以必须根据内容设置好 bottomLine 的约束.
+ 给 底部线设置两个 top 约束.约束一: 距离内容标签为 0
+                         约束二: 距离内容标签上的图的高度设置为标签高度
+ 根据内容设置 top 约束二
+ 
+ */
 import UIKit
 import Kingfisher
 
@@ -15,7 +24,6 @@ class InkeHotAnchorCell: UITableViewCell {
     var anchorModel : Live?  {
         didSet{
             guard let model = anchorModel else { return }
-
             setData(model: model)
         }
     }
@@ -29,8 +37,17 @@ class InkeHotAnchorCell: UITableViewCell {
     @IBOutlet weak var descriptLbl: UILabel!
 
     @IBOutlet weak var bottomLine: UIView!
+    
+    
+    //宽度
+    @IBOutlet weak var descritpLblWidth: NSLayoutConstraint!
+    @IBOutlet weak var descritpLblHegiht: NSLayoutConstraint!
+    @IBOutlet weak var lineTop: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        descritpLblWidth.constant = screenWidth - 2.0 * margin
+        
     }
     
 }
@@ -46,12 +63,18 @@ extension InkeHotAnchorCell{
         onlineLbl.text = "\(model.onlineUsers!)人"
         bigImage.kf.setImage(with: url)
         descriptLbl.text = model.name
-        
-        
-        if model.rowHeight == 0.0 {
-            layoutIfNeeded()
-            model.rowHeight = bottomLine.frame.maxY
+        if model.name == "" {
+            lineTop.constant = 0
+            model.rowHeight = 435
+        }else{
+            lineTop.constant = 30
+            model.rowHeight = 465
         }
+        
+//        if model.rowHeight == 0.0 {
+//            layoutIfNeeded()
+//            model.rowHeight = bottomLine.frame.maxY
+//        }
         
     }
 }
