@@ -7,15 +7,16 @@
 //
 
 import UIKit
-
+var count: Int = 0
+let inkeHotAnchorCell = "InkeHotAnchorCell"
 class HotAnchorVC: UITableViewController {
    fileprivate lazy var anchorModel: InkeHotViewModel = InkeHotViewModel()
-    var dataSource: [Live]?
+    var dataSource: [Live]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         loadData()
+        setupUI()
     }
 
 }
@@ -25,8 +26,9 @@ extension HotAnchorVC{
     func setupUI()  {
         
         tableView.register(UINib(nibName: "InkeHotAnchorCell", bundle: nil), forCellReuseIdentifier: inkeHotAnchorCell)
-        tableView.rowHeight = 465
         tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 450
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
@@ -34,7 +36,7 @@ extension HotAnchorVC{
 extension HotAnchorVC{
     //加载数据
     func loadData() {
-        let url = "http://service.inke.com/api/live/simpleall?&uid=47702860"
+        let url = "http://service.inke.com/api/live/aggregation?uid=47702860&interest=1"
         
         anchorModel.loadInkeAnchors(url: url) { [weak self] in
             self?.dataSource = self?.anchorModel.InkeAnchors
@@ -53,15 +55,11 @@ extension HotAnchorVC{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: inkeHotAnchorCell) as! InkeHotAnchorCell
         cell.anchorModel = dataSource?[indexPath.row];
+        count += 1
+        mprint(message: "---\(count)---")
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let model = dataSource?[indexPath.row];
-    
-        return model?.rowHeight ?? 0
-        
-    }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let room = LivingCollection()
