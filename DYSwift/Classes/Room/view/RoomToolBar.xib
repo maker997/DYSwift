@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A2323a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RoomToolBar" customModule="Live" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGe-JQ-LAd" userLabel="cancel">
+                    <rect key="frame" x="335" y="0.0" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="TO6-xj-rFk"/>
+                        <constraint firstAttribute="height" constant="30" id="ePA-ll-Gk0"/>
+                    </constraints>
+                    <state key="normal" image="shortvideo_launch_close"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="closeClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="eLC-au-RFh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDz-yv-s8z" userLabel="share">
+                    <rect key="frame" x="295" y="0.0" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="8k2-AS-Bbb"/>
+                        <constraint firstAttribute="width" constant="30" id="DMU-O9-jAj"/>
+                    </constraints>
+                    <state key="normal" image="room_pop_up_share"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="shareClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="e2W-Di-eHi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vD7-yP-gzO" userLabel="gift">
+                    <rect key="frame" x="255" y="0.0" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Rth-bo-WDB"/>
+                        <constraint firstAttribute="width" constant="30" id="bFz-Hq-ktv"/>
+                    </constraints>
+                    <state key="normal" image="wechat_down_gift"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="giftClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Lp2-AL-LPa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f55-qd-lgX" userLabel="message">
+                    <rect key="frame" x="10" y="0.0" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="HKO-vj-m2b"/>
+                        <constraint firstAttribute="width" constant="30" id="R7S-aw-CmB"/>
+                    </constraints>
+                    <state key="normal" image="message1"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="messageClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="VFL-Hd-ufQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oen-iu-G8O" userLabel="contact">
+                    <rect key="frame" x="215" y="0.0" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Vsk-zs-LVL"/>
+                        <constraint firstAttribute="width" constant="30" id="wCR-gz-yJR"/>
+                    </constraints>
+                    <state key="normal" image="message"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="contactClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="V4c-BA-6Do"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="f55-qd-lgX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="39k-3S-jd6"/>
+                <constraint firstAttribute="trailing" secondItem="BGe-JQ-LAd" secondAttribute="trailing" constant="10" id="KC2-2a-8X2"/>
+                <constraint firstItem="NDz-yv-s8z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LP6-SR-inK"/>
+                <constraint firstItem="BGe-JQ-LAd" firstAttribute="leading" secondItem="NDz-yv-s8z" secondAttribute="trailing" constant="10" id="WDq-1V-EXz"/>
+                <constraint firstItem="NDz-yv-s8z" firstAttribute="leading" secondItem="vD7-yP-gzO" secondAttribute="trailing" constant="10" id="fgw-Qe-avB"/>
+                <constraint firstItem="vD7-yP-gzO" firstAttribute="leading" secondItem="oen-iu-G8O" secondAttribute="trailing" constant="10" id="i7o-Xl-ycB"/>
+                <constraint firstItem="BGe-JQ-LAd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kUS-KW-LzJ"/>
+                <constraint firstItem="f55-qd-lgX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="l0X-Vt-Y6c"/>
+                <constraint firstItem="vD7-yP-gzO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qPo-Ss-Eu0"/>
+                <constraint firstItem="oen-iu-G8O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ygm-N8-n04"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="message" width="22" height="22"/>
+        <image name="message1" width="20" height="20"/>
+        <image name="room_pop_up_share" width="40" height="40"/>
+        <image name="shortvideo_launch_close" width="49" height="49"/>
+        <image name="wechat_down_gift" width="50" height="50"/>
+    </resources>
+</document>
