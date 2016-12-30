@@ -36,9 +36,9 @@ extension HotAnchorVC{
     func loadData() {
         let url = "http://service.inke.com/api/live/simpleall?&uid=47702860"
         
-        anchorModel.loadInkeAnchors(url: url) {
-            self.dataSource = self.anchorModel.InkeAnchors
-            self.tableView.reloadData()
+        anchorModel.loadInkeAnchors(url: url) { [weak self] in
+            self?.dataSource = self?.anchorModel.InkeAnchors
+            self?.tableView.reloadData()
         }
     }
 }
@@ -51,7 +51,7 @@ extension HotAnchorVC{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: inkeHotAnchorCell, for: indexPath) as! InkeHotAnchorCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: inkeHotAnchorCell) as! InkeHotAnchorCell
         cell.anchorModel = dataSource?[indexPath.row];
         return cell
     }

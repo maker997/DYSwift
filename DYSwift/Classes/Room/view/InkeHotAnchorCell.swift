@@ -56,11 +56,11 @@ extension InkeHotAnchorCell{
     
     //设置数据
     fileprivate func setData(model: Live) {
-        let url = URL(string: model.creator.portrait)
+        let url = URL(string: model.creatorModel.portrait)
         headerView.kf.setImage(with: url)
-        nameLbl.text = model.creator.nick
+        nameLbl.text = model.creatorModel.nick
         cityLbl.text = model.city
-        onlineLbl.text = "\(model.onlineUsers!)人"
+        onlineLbl.text = "\(model.online_users)人"
         bigImage.kf.setImage(with: url)
         descriptLbl.text = model.name
         if model.name == "" {

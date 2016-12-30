@@ -49,7 +49,7 @@ extension LivingRoom{
 //MARK: ====== 填充数据 ======
 extension LivingRoom{
     func setData() {
-        let url = URL(string: (anchorModel?.creator.portrait)!)
+        let url = URL(string: (anchorModel?.creatorModel.portrait)!)
         bgView.kf.setImage(with: url)
     }
 }

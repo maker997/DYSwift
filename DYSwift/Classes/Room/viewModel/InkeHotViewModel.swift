@@ -27,9 +27,13 @@ extension InkeHotViewModel{
             }
             guard let lives = (result["lives"] as? [[String:Any]]) else { return }
             
+            var i = 0
             for dict in lives {
-                let live = Live(fromDictionary: dict as NSDictionary)
+                let live = Live(fromDictionary: dict)
+                if i < 20{
                 self.InkeAnchors.append(live)
+                }
+                i += 1
             }
             
             finished()

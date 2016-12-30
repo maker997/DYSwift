@@ -90,7 +90,7 @@ extension LivingCollection{
         let anchorModel = dataSource[indexPath.row]
         
         
-        let SteamUrl = URL(string: (anchorModel.streamAddr)!)
+        let SteamUrl = URL(string: (anchorModel.stream_addr)!)
         
         player = IJKFFMoviePlayerController(contentURL: SteamUrl, with: nil)
         player.prepareToPlay()
